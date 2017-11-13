@@ -1,0 +1,41 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  background: #f9f9f9;
+  color: #333;
+}
+
+img {
+  background-image: url('./views/static/images/c-bg.jpg');
+  background-size: 100% 100%;
+}
+
+$footHeight: 104px;
+// .wrapper{  // 项目和钱包底部单独设置的class
+//     padding-bottom:$footHeight;
+// }
+
+.bottom-fixed {
+  height: $footHeight;
+  line-height: 1;
+  // position:fixed;
+  // bottom:0;
+  width: 100%;
+  // flex: 0 0 104px;
+  z-index: 999;
+}
+
+.wallet-header {
+  background-color: red !important;
+  .title {
+    color: #fff !important;
+  }
+}
+
+.ph {
+  background-color: #EBE9EB;
+}

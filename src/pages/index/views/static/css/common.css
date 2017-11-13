@@ -1,0 +1,158 @@
+ /*密码眼睛  */
+.eyeOff{float:right;margin-top:32px;width:40px;height:36px;background:url("../images/close_eye.png") 0 10px no-repeat;background-size:30px 14px;}
+.eyeOn{float:right;margin-top:32px;width:40px;height:36px;background:url("../images/open_eye.png") 0 10px no-repeat;background-size:30px 16px;}
+ /*.eyeOn{background-position:-1px -24px;}*/
+.iconW{display:inline-block;width:68px;height:44px;background:url("../images/logIcon.png") 0 0 no-repeat;background-size:34px 148px;vertical-align:middle;}
+
+/*暂无数据  */
+.noData {
+	font-size: 28px;
+	color:#9d9d9d;
+	text-align:center;
+	padding-top:160px;
+}
+.noData .noDataIcon {
+	display: block;
+	margin:0 auto;
+	width:500px;
+	height:264px;
+	background:url(../images/icon_nodata.png) no-repeat;
+	background-size:100% 100%;
+}
+
+/*标状态  */
+.pro-mark{
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 1px;
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+	font-size: 22px;
+	margin-top: 6px;
+}
+.red-mark{  /*发售中、已满额  */
+	background-color: #fa4e4e;
+}
+.gray-mark{  /*已结清  */
+	background-color: #afb0be;
+}
+.orange-mark{  /*还款中  */
+	background-color: #ff8a00;
+}
+
+/*项目列表  */
+.prolist .proLink{display: block;}
+.prolist .pro-title,.prolist .pro-detail{
+	background-color: #fff;
+	padding:20px 28px;
+}
+.prolist .pro-item{
+	-moz-box-shadow:0px 2px 4px #eee;
+	-webkit-box-shadow:0px 2px 4px #eee;
+	box-shadow:0px 2px 4px #eee;
+}
+.prolist .pro-title{
+	border-bottom: 1px solid #eee;
+}
+.prolist .pro-title li{
+	float: left;
+	width: 50%;
+	height: 34px;
+	line-height: 34px;
+	color: #666;
+	font-size: 24px;
+	overflow: hidden;
+	margin-bottom: 14px;
+}
+.prolist .pro-title li span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.prolist .pro-title li .icon{
+	background: url(../images/icon_list.png) no-repeat;
+	background-size: 20px 126px;
+	margin-right: 12px;
+	width: 20px;
+	height: 20px;
+}
+.prolist .pro-title li .icon.icon_height{
+	background-position: 0 2px;
+}
+.prolist .pro-title li .icon.icon_source{
+	background-position: 0 -70px;
+}
+.prolist .pro-title li .icon.icon_date{
+	background-position: 0 -35px;
+}
+.prolist .pro-title li .icon.icon_title{
+	background-position: 0 -106px;
+}
+
+.prolist .pro-detail{
+	display:-moz-flex;
+	display: -webkit-flex;
+	display:flex;
+}
+.prolist .pro-detail .pro-box{
+	-webkit-transition: rotate(-89deg);
+	-moz-transition: rotate(-89deg);
+	transition: rotate(-89deg);
+}
+.prolist .pro-detail .pro-earnings{
+	width: 208px;
+	padding-left: 20px;
+	border-right: 1px solid #eee;
+}
+.prolist .pro-detail .pro-deadline{
+	width: 300px;
+	padding-left: 98px;
+}
+.prolist .pro-detail .pro-deadline .pro-txt{
+	color: #333;
+	padding-top: 12px;
+}
+.prolist .pro-detail .pro-txt{
+	font-size: 45px;
+	padding-top: 12px;
+}
+.prolist .pro-box{
+	width:280px;
+	height:120px;
+	position: relative;
+	margin:0 auto;
+	text-align: center;
+}
+.prolist .pro-number{
+	position: absolute;
+	top: 26px;
+	left: 65px;
+	font-size: 20px;
+	width:120px;
+}
+.prolist .pre-txt{
+	position: absolute;
+	z-index:100;
+	padding-bottom: 18px;
+	left:10px;
+	font-size: 24px;
+}
+.prolist .pro-detail .bg-white{
+	position: absolute;
+	z-index:99;
+	width:100%;
+	height:38px;
+}
+
+
+/*超出文字省略  */
+.prolist .pro-title li .txt{
+	width:134px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+/*渐变banner*/
+/*渐变背景*/
+.bg-gradient{position:relative;width:100%;background:url("../images/bg.png") center bottom no-repeat,-webkit-linear-gradient(-220deg, #FF5940 0%, #FF5C9E 100%);background-size: 100% 85px;}
+.bg-gradient .decoration{position:absolute;bottom:162px;left:0;width:100%;height:210px;background: url("../images/bg-1.png") center no-repeat;background-size: 100%;}

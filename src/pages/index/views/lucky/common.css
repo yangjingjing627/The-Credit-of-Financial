@@ -1,0 +1,45 @@
+/*
+去除系统默认的样式
+*/
+input[type=range] {
+    background:url("images/redBar.png") 0 0 no-repeat,-webkit-linear-gradient(#EBECEC, #EBECEC);
+    background-size:1% 100%;
+    -webkit-appearance: none;
+    width: 100%;
+    height:14px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+/*
+给滑动轨道(track)添加样式
+*/
+input[type=range]::-webkit-slider-runnable-track {
+    /*background: #FF5C5C;*/
+    width: 100%;
+    height: 14px;
+    margin: 0 auto;
+    border-radius: 10px; /*将轨道设为圆角的*/
+}
+input[type=range]:focus {
+    outline: none;
+}
+/*
+给滑块(thumb)添加样式
+*/
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 34px;
+    width: 34px;
+    margin-top: -10px; /*使滑块超出轨道部分的偏移量相等*/
+    background: #FF5C5C;
+    border-radius: 50%; /*外观设置为圆形*/
+    border: solid 4px #fff; /*设置边框*/
+    box-shadow: 0 0 0 #3b4547; /*添加底部阴影*/
+}
+/*
+根据滑块所在位置填充进度条
+*/
