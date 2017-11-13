@@ -4,7 +4,7 @@
             <ul class="wrap f32 g6">
                 <li class="flexA">
                     <div>
-                        <span class="iconW"></span>
+                        <span class="tel_icon"></span>
                         <input type="tel" placeholder="请输入手机号" maxlength="11" v-model="tel">
                     </div>
                     <div class="getCodeBtn" v-if="code"><i class="blue">{{time}}s</i>重新获取</div>
@@ -12,7 +12,7 @@
                 </li>
                 <li class="flexA">
                     <div>
-                        <span class="iconW codeIc"></span>
+                        <span class="psw_icon"></span>
                         <input type="text" placeholder="请输入验证码" maxlength="6" v-model="authCode">
                     </div>
                 </li>
@@ -43,10 +43,6 @@
         background-position: 0 -54px
     }
 
-    input {
-        vertical-align: middle;
-    }
-
     .mb0 {
         margin-bottom: 0;
     }
@@ -54,7 +50,16 @@
     .pswIcon {
         background-position: 0 -106px
     }
-
+    .tel_icon {
+        padding-left: 56px;
+    		background: url("./../static/images/tel_icon.png") no-repeat left center;
+    		background-size: 24px 30px;
+    }
+    .psw_icon {
+      padding-left: 56px;
+      background: url("./../static/images/pwd_icon.png") no-repeat left center;
+      background-size: 24px 30px;
+    }
     .f22 {
         color: #5f616b;
         padding: 20px 0 60px 30px;

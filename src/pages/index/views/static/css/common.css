@@ -1,8 +1,7 @@
  /*密码眼睛  */
 .eyeOff{float:right;margin-top:32px;width:40px;height:36px;background:url("../images/close_eye.png") 0 10px no-repeat;background-size:30px 14px;}
 .eyeOn{float:right;margin-top:32px;width:40px;height:36px;background:url("../images/open_eye.png") 0 10px no-repeat;background-size:30px 16px;}
- /*.eyeOn{background-position:-1px -24px;}*/
-.iconW{display:inline-block;width:68px;height:44px;background:url("../images/logIcon.png") 0 0 no-repeat;background-size:34px 148px;vertical-align:middle;}
+/*.iconW{display:inline-block;width:68px;height:44px;background:url("../images/logIcon.png") 0 0 no-repeat;background-size:34px 148px;vertical-align:middle;}*/
 
 /*暂无数据  */
 .noData {
