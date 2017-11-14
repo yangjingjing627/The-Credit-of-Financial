@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!-- <div class="step1" v-show="show">
+        <div class="step1" v-show="show">
             <ul class="wrap f32 g6">
                 <li class="flexA">
                     <div>
@@ -20,22 +20,13 @@
             <div class="content">
                 <div class="btn" :class="tel&&authCode?'':'opacity'" @click="submit">下一步</div>
             </div>
-        </div> -->
-        <!-- <div class="step2" v-show="!show">
-            <div class="wrap f30 mb0">
-                <span class="iconW pswIcon"></span>
-                <input type="password" maxlength="20" placeholder="设置新登录密码" v-model="newPsw">
-            </div>
-            <p class="f22">6-20位数字、字母、符号，不允许有空格</p>
-            <div class="content">
-                <div type="button" class="btn" :class="newPsw?'':'opacity'" @click="savePsw">完成</div>
-            </div>
-        </div> -->
-        <div class="step2">
+        </div>
+
+        <div class="step2" v-show="!show">
           <ul class="wrap f32 g6">
               <li class="flexA">
                   <div>
-                      <span class="tel_icon"></span>
+                      <span class="pwd_icon"></span>
                       <input type="password" maxlength="20" placeholder="设置新登录密码" v-model="newPsw">
                   </div>
               </li>
@@ -71,9 +62,14 @@
       background: url("./../static/images/verify_icon.png") no-repeat left center;
       background-size: 24px 30px;
     }
+    .pwd_icon {
+      padding-left: 56px;
+      background: url("./../static/images/pwd_icon.png") no-repeat left center;
+      background-size: 24px 30px;
+    }
     .f22 {
         color: #5f616b;
-        padding: 20px 0 60px 30px;
+        padding: 18px 0 0px 40px;
         margin-bottom: 200px;
     }
 </style>
