@@ -6,10 +6,11 @@ import cookies from 'js-cookie';
 // import VeeValidate from 'vee-validate';
 import 'static/css/quick-layout.css';
 import 'static/css/site.css';
+import 'static/css/variables.scss';
 import './index.scss';
 import router from './router.js';
 //import FastClick from 'fastclick';
-import App from './app.vue';    
+import App from './app.vue';
 import cHeader from './widget/cHeader.vue';
 import {types} from 'index/vuex/mutation-types'
 import toast from 'widget/toast';
@@ -61,13 +62,13 @@ Vue.http.interceptors.push((request, next)  => {
             if(data){
                 const status = data.status;
                 // token失效
-                if(status=="40100551"){ 
+                if(status=="40100551"){
                     if(!request.data || !request.data.noToken){
                         let path=location.hash;
                         path=path.substring(2);
                         let url="login?url=" + encodeURIComponent(path)
                         if(path == 'home'){
-                            router.push({'path':'home'});    
+                            router.push({'path':'home'});
                         }else{
                             router.push({'path':url});
                         }

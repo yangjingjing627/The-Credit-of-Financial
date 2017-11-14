@@ -35,10 +35,10 @@
     </div>
 </template>
 <style lang="sass" scoped>
-    .wrap {
-        margin-bottom: 124px;
-        line-height: 100px;
-    }
+    // .wrap {
+    //     margin-bottom: 124px;
+    //     line-height: 100px;
+    // }
 
     .codeIc {
         background-position: 0 -54px
