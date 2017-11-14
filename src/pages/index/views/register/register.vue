@@ -1,17 +1,17 @@
 <template>
     <div class="bg">
         <ul>
-            <li class="l">
+            <li class="l"  v-bind:class="{ registing: step1 }">
                 <div class="step1_icon step_icon" v-if="sucIcon1">1</div>
                 <div class="step1_icon suc" v-else></div>
                 <div class="f24">填写手机号</div>
             </li>
-            <li class="step2W">
+            <li class="step2W" v-bind:class="{ registing: step2 }">
                 <div class="step2_icon step_icon" v-if="sucIcon2">2</div>
                 <div class="step2_icon suc" v-else></div>
                 <div class="f24">获取验证码</div>
             </li>
-            <li class="r">
+            <li class="r" v-bind:class="{ registing: step3 }">
                 <div class="step3_icon step_icon" v-if="sucIcon3">3</div>
                 <div class="step3_icon suc" v-else></div>
                 <div class="f24">设置登录密码</div>
@@ -57,6 +57,7 @@
     </div>
 </template>
 <style lang="sass" scoped>
+  @import 'src/static/css/variables.scss';
     .btn {
         line-height: 88px
     }
@@ -80,7 +81,7 @@
     }
 
     .step_icon {
-        border: 1px solid #a0a0a0;
+        border: $border;
         border-radius: 50%;
         width: 33px;
         height: 33px;
@@ -88,6 +89,8 @@
         line-height: 33px;
         font-size: 24px;
         color: #868896;
+        font-weight: 300;
+        background-color: $bg-color;
     }
 
     .step1_icon {
@@ -120,10 +123,10 @@
     }
 
     .f24 {
-        padding: 19px 0 127px;
+        padding: 36px 0 127px;
         line-height: 1;
         font-size: 24px;
-        color: #555;
+        color: $first-header;
     }
 
     .step {
@@ -217,6 +220,14 @@
         background: url("./images/suc.png") center no-repeat;
         background-size: 100%;
     }
+    .registing {
+      .step_icon {
+        background-color: $primary;
+        color: #fff;
+      }
+      .f24 {
+        color: $primary;
+      }
+    }
 </style>
 <script src="./register.js"></script>
-

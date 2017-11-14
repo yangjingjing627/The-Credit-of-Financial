@@ -87,8 +87,8 @@
     }
 
     .cheader .title {
-        font-size: 36px;
-        color: #555;
+        font-size: 34px;
+        color: #333;
         text-align: center;
     }
 
