@@ -31,7 +31,7 @@
                   </div>
               </li>
           </ul>
-          <p class="f24 pt18 pl40">6-20位数字、字母、符号，不允许有空格</p>
+          <p class="f24 pt18 pl40 g9">6-20位数字、字母、符号，不允许有空格</p>
             <div class="content mt200">
                 <div type="button" class="btn" :class="newPsw?'':'opacity'" @click="savePsw">完成</div>
             </div>
@@ -67,10 +67,6 @@
       background: url("./../static/images/pwd_icon.png") no-repeat left center;
       background-size: 24px 30px;
     }
-    .f24 {
-        color: #5f616b;
-        // padding: 18px 0 0px 40px;
-        // margin-bottom: 200px;
-    }
+    
 </style>
 <script src="./forgotLogPsw.js"></script>s
