@@ -71,7 +71,7 @@
 	border-radius: 12px;
 }
 
-.opacity{opacity:0.6}
+.opacity{opacity:0.2}
 
 /*错误提示  */
 .errormsg{color:#f92b2f;font-size:26px;margin-top:8px;height: 40px;}
@@ -118,6 +118,7 @@ a { color: #333; text-decoration: none; }
 .mt50 {margin-top:50px;}
 .mt60 {margin-top:60px;}
 .mt100 {margin-top:100px;}
+.mt120 {margin-top:120px;}
 .mt200 {margin-top:200px;}
 .mt260 { margin-top: 260px; }
 .mb1 { margin-bottom: 1px; }
@@ -129,6 +130,7 @@ a { color: #333; text-decoration: none; }
 .mb20 { margin-bottom: 20px; }
 .mb30 { margin-bottom: 30px; }
 .mb40 { margin-bottom: 40px; }
+
 /* padding */
 .p0 { padding: 0; }
 .p1 { padding: 1px; }
@@ -156,6 +158,11 @@ a { color: #333; text-decoration: none; }
 .pt15 { padding-top: 15px; }
 .pr15 { padding-right: 15px; }
 .pb15 { padding-bottom: 15px; }
+.p18 { padding: 18px; }
+.pl18 { padding-left: 18px; }
+.pt18 { padding-top: 18px; }
+.pr18 { padding-right: 18px; }
+.pb18 { padding-bottom: 18px; }
 .p20 { padding: 20px; }
 .pl20 { padding-left: 20px; }
 .pt20 { padding-top: 20px; }
