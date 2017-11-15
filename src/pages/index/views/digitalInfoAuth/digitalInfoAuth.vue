@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="topWar" v-if='showTip'>
-            <div class=""><i>!</i></div>
+            <div class=""><i></i></div>
             <p>请确保放款和还款的资金安全,请提供本人所有的数字钱包账户信息</p>
             <div @click="showTip=false"><b></b></div>
         </div>
@@ -57,10 +57,11 @@
 
     .topWar {
         width: 100%;
-        color: #fff;
-        background: #FA5559;
+        color: #A64F18;
+        background: #FFEABA;
         height: 106px;
         display: flex;
+        align-items: center;
 
     div {
         width: 106px;
@@ -82,15 +83,13 @@
     }
 
     i {
-        text-align: center;
-        line-height: 30px;
-        color: #FA5559;
-        background: #fff;
+        background: url(./images/sigh.png) no-repeat center;
+        background-size: 30px 30px;
     }
 
     b {
-        background: #fff url(./images/Path.png) no-repeat center;
-        background-size: 18px 18px;
+        background: url(./images/Path.png) no-repeat center;
+        background-size: 30px 30px;
     }
 
     }
@@ -99,6 +98,7 @@
         flex: 1;
         padding-top: .2rem;
         font-weight: lighter;
+        font-weight: normal;
     }
 </style>
 
