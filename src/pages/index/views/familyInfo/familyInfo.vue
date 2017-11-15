@@ -3,8 +3,8 @@
         <p class="titleTwo">个人信息</p>
         <ul class="wrap">
             <li class="flexA">
-                <span>婚姻状况</span>
-                <select class="w440 db" v-model="isMarry">
+                <span class="w200 inline-block">婚姻状况</span>
+                <select class="w440 db" v-model="isMarry" style="color: #ccc; font-weight: 300;">
                     <option value="0">请选择</option>
                     <option value="1">未婚</option>
                     <option value="2">已婚</option>
@@ -16,17 +16,17 @@
         <p class="titleTwo">{{isMarry!=2?'亲属联系方式':'配偶联系方式'}}</p>
         <ul class="wrap">
             <li class="flexA">
-                <span>姓名</span>
+                <span class="w200 inline-block">姓名</span>
                 <input type="text" :placeholder="isMarry!=2?'请输入亲属姓名':'请输入配偶姓名'" maxlength="20" class="w440 db" v-model="consort">
             </li>
             <li class="flexA">
-                <span>手机号</span>
-                <div class="flexA p0">
-                    <input type="text" readonly="readonly" class="w440 db" placeholder="打开通讯录" v-model="mobile1" @click="fGetTelephoneDirectory(1)">
+                <span  class="w200 inline-block">手机号</span>
+                <div class="p0 box-sizing">
+                    <input type="text" readonly="readonly" class="w440 db arrow_r" placeholder="打开通讯录" v-model="mobile1" @click="fGetTelephoneDirectory(1)">
                 </div>
             </li>
             <li class="flexA">
-                <span>身份证</span>
+                <span  class="w200 inline-block">身份证</span>
                 <input type="text" :placeholder="isMarry!=2?'请输入亲属身份证号':'请输入配偶身份证号'" maxlength="18" id="idNum"
                        class="w440 db" v-model="walletBank">
             </li>
@@ -35,13 +35,13 @@
             <p class="titleTwo">其他联系人联系方式</p>
             <ul class="wrap">
                 <li class="flexA">
-                    <span>姓名</span>
+                    <span  class="w200 inline-block">姓名</span>
                     <input type="text" placeholder="请输入联系人姓名" maxlength="20" class="w440 db">
                 </li>
                 <li class="flexA">
-                    <span>手机号</span>
-                    <div class="flexA p0">
-                        <input type="text" placeholder="打开通讯录" readonly="readonly" class="w440 db" v-model="mobile2" @click="fGetTelephoneDirectory(2)">
+                    <span  class="w200 inline-block">手机号</span>
+                    <div class="p0 box-sizing">
+                        <input type="text" placeholder="打开通讯录" readonly="readonly" class="w440 db arrow_r" v-model="mobile2" @click="fGetTelephoneDirectory(2)">
                     </div>
                 </li>
             </ul>
@@ -63,7 +63,7 @@
     }
 
     .titleTwo {
-        margin: 24px 40px;
+        margin: 24px 0 14px 40px;
         font-size: 28px;
         color: #999999;
     }
@@ -73,8 +73,8 @@
         padding-right: 30px;
         padding-left: 10px;
         text-align: right;
-        background: url("../lucky/images/arr-down.png") right center no-repeat;
-        background-size: 16px 12px;
+        background: url("../static/images/arrow_b.png") right center no-repeat;
+        background-size: 15px 7.5px;
 
     option {
         min-height: 20px;
@@ -83,5 +83,7 @@
     }
 
     }
+    
+
 </style>
 <script src="./familyInfo.js"></script>

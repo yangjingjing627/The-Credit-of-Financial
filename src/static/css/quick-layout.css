@@ -229,6 +229,8 @@ a { color: #333; text-decoration: none; }
 .tr { text-align: right; }
 .tl { text-align: left; }
 .tj { text-align: justify; }
+/* width */
+.w200 { width: 200px; }
 /* color  */
 .red{color: #f92b2f;}
 .blue{color: #30A4FF;}
@@ -299,6 +301,7 @@ a { color: #333; text-decoration: none; }
 .abs-out { position: absolute; left: -999em; top: -999em; }
 .abs-clip { position: absolute; clip: rect(0 0 0 0); }
 /*inline-block与float等宽列表*/
+.inline-block { display: inline-block;}
 .inline-box { font-size: 1em; letter-spacing: -.25em; font-family: Arial; }
 .inline-two, .inline-three, .inline-four, .inline-five, .inline-six, .inline-any { display: inline-block; *display: inline; letter-spacing: 0; vertical-align: top; *zoom: 1; }
 .float-two, .float-three, .float-four, .float-five, .float-six { float: left; }
@@ -314,3 +317,9 @@ a { color: #333; text-decoration: none; }
 
 /*箭头18*34*/
 .arrows{display:inline-block;width:18px;height:34px;background: url("./../images/arrows.png") no-repeat center center;background-size:18px 34px;position: relative;top: 8px;}
+
+.box-sizing{ box-sizing: border-box;}
+.arrow_r {
+	background: url("../static/images/arrow_r.png") right center no-repeat;
+	background-size: 7.5px 15px;
+}
