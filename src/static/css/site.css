@@ -14,6 +14,10 @@ input,textarea,select{
     font-size:100%;
     font-family:inherit;
 }
+input {
+  color: #666;
+  font-size: 30px;
+}
 body,h1,h2,h3,h4,h5,h6,p,ul,ol,form{
     margin:0;
 }

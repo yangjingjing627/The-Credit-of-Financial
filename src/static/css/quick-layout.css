@@ -152,7 +152,7 @@
 }
 
 .disabled {
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .gray_disabled {
@@ -324,7 +324,9 @@ a {
 .mr30 {
   margin-right: 30px;
 }
-
+.mt0 {
+  margin-top: 0px;
+}
 .mt1 {
   margin-top: 1px;
 }

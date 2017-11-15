@@ -1,55 +1,57 @@
 <template>
     <div class="pb40">
-        <div class="topWar">
-            <div class=""><i>!</i></div>
+        <div class="topWar" v-if='showTip'>
+            <div class=""><i></i></div>
             <p>请提交正确的身份证,提交后不可修改</p>
+            <div @click="showTip=false"><b></b></div>
         </div>
-        <ul class="wrap">
+        <ul class="wrap mt0">
             <li class="flexA border0">
-                <p>添加身份证正面</p>
+                <p class="f28 g6">添加身份证正面</p>
             </li>
             <li class="tc">
                 <!-- <img src="file://storage/emulated/0/Font_1505470984202.png" @click="imgClick($event)" class="fImg" /> -->
                 <div class="upload1" @click="fScanIdCard('face')">
                     <img :src="imgSrcFront" v-if="showFront"/>
                 </div>
-                <p class="margin30">点击上传照片</p>
-                <p class="right_blue" @click="fScanIdCard('face')">点击重新上传照片</p>
+                <p class="margin30 g9 f24">点击上传照片</p>
+                <!-- <p class="right_blue" @click="fScanIdCard('face')">点击重新上传照片</p> -->
             </li>
         </ul>
 
-        <ul class="wrap">
+        <ul class="wrap mt0">
             <li class="flexA">
-                <span class="w160">姓名</span>
+                <span class="w160 f30 g3">姓名</span>
                 <input type="text" placeholder="" class="w440" v-model="name" maxlength="10">
                 <span class="editIcon"></span>
             </li>
             <li class="flexA">
-                <span class="w160">身份证号</span>
+                <span class="w160 f30 g3">身份证号</span>
                 <input type="text" placeholder="" maxlength="20" class="w440" v-model="idCard">
             </li>
         </ul>
         <ul class="wrap">
             <li class="flexA border0">
-                <span>添加身份证背面</span>
+                <span class="f28 g6">添加身份证背面</span>
             </li>
             <li class="tc">
                 <div class="upload2" @click="fScanIdCard('reverse')">
                     <img :src="imgSrcBack" v-if="showBack"/>
                 </div>
-                <p class="margin30">点击上传照片</p>
-                <p class="right_blue" @click="fScanIdCard('reverse')">点击重新上传照片</p>
+                <p class="margin30 g9 f24">点击上传照片</p>
+                <!-- <p class="right_blue" @click="fScanIdCard('reverse')">点击重新上传照片</p> -->
             </li>
         </ul>
-        <ul class="wrap">
+        <ul class="wrap mt0">
             <li class="flexA">
-                <span class="w160">有效期</span>
+                <span class="w160 f28 g3">有效期</span>
                 <input type="text" class="w440" v-model="effectiveTime">
             </li>
         </ul>
         <div class="btn w670 mt30" :class="name&&idCard&&effectiveTime&&frontPicture&&backPicture?'':'disabled'" @click="sureInfo">确认信息无误</div>
     </div>
 </template>
+<script src="./identityAuthen.js"></script>
 <style lang="sass" scoped>
     .fImg {
         border: 2px solid #333;
@@ -81,14 +83,14 @@
         width: 44px;
         height: 44px;
         border-radius: 50%;
-        background: #30A4FF url("./images/edit.png") no-repeat center;
-        background-size: 50%;
+        background: url("./images/edit.png") no-repeat center;
+        background-size: 34px 29px;
     }
 
     .topWar {
         width: 100%;
-        color: #fff;
-        background: #FA5559;
+        color: #A8541D;
+        background: #FFEABA;
         height: 70px;
         display: flex;
 
@@ -98,7 +100,7 @@
         height: 70px;
         position: relative;
 
-    i {
+    i, b {
         position: absolute;
         left: 0;
         right: 0;
@@ -115,6 +117,14 @@
         color: #FA5559;
         background: #fff;
     }
+      i {
+          background: url(./images/sigh.png) no-repeat center;
+          background-size: 30px 30px;
+      }
+      b {
+          background: url(./images/Path.png) no-repeat center;
+          background-size: 30px 30px;
+      }
 
     }
     }
@@ -126,7 +136,6 @@
 
     .margin30 {
         margin: 30px 0;
-        font-size: 28px;
     }
 
     .right_blue {
@@ -178,4 +187,3 @@
     }
 
 </style>
-<script src="./identityAuthen.js"></script>

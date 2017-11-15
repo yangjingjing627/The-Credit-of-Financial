@@ -10,6 +10,7 @@ export default {
     created() {
 
     },
+
     mounted() {
         var self = this;
         bridgeRegisterHandler({  // 身份证信息回调
@@ -35,7 +36,7 @@ export default {
                 //         "backPicture": "/storage/emulated/0/Back_1505554416132.png"
                 //     }
                 // } 
-               
+
                 self.IdCardInfo = JSON.parse(responseData);
                 if (self.IdCardInfo.front) {  // 身份证正面信息
                     self.showFront = true;
@@ -66,6 +67,7 @@ export default {
             front: '',
             sex:'',
             address:'',
+            showTip: true,
             birthdate:''//出生日期
         }
     },
