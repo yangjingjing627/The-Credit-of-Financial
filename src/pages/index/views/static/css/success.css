@@ -1,5 +1,31 @@
 /*成功页  */
-.success_wrap{height: 100%;background-color: #fff;padding-top: 80px;}
-.success_wrap .bd{padding-bottom: 100px;}
-.success_wrap .bd .pic{margin:0 auto;padding-bottom: 100px;background:url(../images/icon_success.png) no-repeat;width: 432px;height: 302px;background-size: 432px 302px;}
-.success_wrap .bd .title{padding-top: 80px;}
+
+.success_wrap {
+  height: 100%;
+  background-color: #fff;
+  padding-top: 80px;
+}
+
+/*.success_wrap .bd {
+  padding-bottom: 100px;
+}*/
+
+.success_wrap .bd {
+  padding-bottom: 150px;
+}
+.success_wrap .bd .pic {
+  margin: 0 auto;
+  padding-bottom: 100px;
+  background: url(../images/icon_success.png) no-repeat;
+  width: 432px;
+  height: 302px;
+  background-size: 432px 302px;
+}
+
+/*.success_wrap .bd .title {
+  padding-top: 80px;
+}*/
+
+.success_wrap .bd .title {
+  padding-top: 120px;
+}
