@@ -18,7 +18,7 @@
         <!-- 错误信息 -->
         <div class="errormsg tc pt20">{{errormsg}}</div>
 
-        <div class="content mt200">
+        <div class="content mt120">
             <div class="btn" :class="amount?'':'disabled'" @click="confirmSetAmount">确定</div>
         </div>
     </div>
