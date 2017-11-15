@@ -99,7 +99,7 @@
         top: 0;
         left: 0;
         background: url(./images/icon_arrow_left.png) no-repeat center;
-        background-size: 22px 40px;
+        background-size: 19px 38px;
     }
 
     .icon_arrow:active {
