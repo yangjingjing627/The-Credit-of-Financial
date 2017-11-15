@@ -74,7 +74,7 @@
         padding-left: 10px;
         text-align: right;
         background: url("../static/images/arrow_b.png") right center no-repeat;
-        background-size: 15px 7.5px;
+        background-size: 30px 15px;
 
     option {
         min-height: 20px;
@@ -83,7 +83,7 @@
     }
 
     }
-    
+
 
 </style>
 <script src="./familyInfo.js"></script>

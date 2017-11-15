@@ -7,27 +7,27 @@
             </li>
             <li class="flexA pr10">
                 <div class="iconW icon2">营业执照</div>
-                <div class="g9 f30">已修改</div>
+                <div class="g9 f30 fw300">已修改</div>
             </li>
             <li class="flexA pr10">
                 <div class="iconW icon3">经营信息</div>
-                <div class="g9 f30">销售待修改</div>
+                <div class="g9 f30 fw300">销售待修改</div>
             </li>
             <li class="flexA pr10">
                 <div class="iconW icon4">店铺照片</div>
-                <div class="g9 f30">销售待修改</div>
+                <div class="g9 f30 fw300">销售待修改</div>
             </li>
             <li class="flexA pr10">
                 <div class="iconW icon5">规模照片</div>
-                <div class="g9 f30">销售待修改</div>
+                <div class="g9 f30 fw300">销售待修改</div>
             </li>
             <li class="flexA pr10">
                 <div class="iconW icon6">许可证</div>
-                <div class="g9 f30">销售待修改</div>
+                <div class="g9 f30 fw300">销售待修改</div>
             </li>
             <li class="flexA pr10">
                 <div class="iconW icon7">补充材料</div>
-                <div class="g9 f30">销售待修改</div>
+                <div class="g9 f30 fw300">销售待修改</div>
             </li>
         </ul>
         <div class="btn mt60 w670">确认提交</div>

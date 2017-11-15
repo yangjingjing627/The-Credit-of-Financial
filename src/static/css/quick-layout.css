@@ -101,6 +101,9 @@
 
 
 /*width  */
+.w-100 {
+  width: 100%;
+}
 
 .w300 {
   width: 300px;
@@ -834,7 +837,9 @@ a {
   width: 200px;
 }
 
-
+.w440 {
+    width: 440px;
+}
 /* color  */
 
 .red {
