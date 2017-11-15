@@ -29,7 +29,7 @@
                     <div class="flexA flexA_auto">
                         <div class="f28 g6">
                             <h5 class="pt30">尊敬的宝粉儿：</h5>
-                            <div class="ti pt50 pb30">
+                            <div class="ti pt50 pb80">
                                 中信银行08月05日17:30至08月06日07:00进行系统维护，期间暂停支付业务，请各位宝粉们提前知悉，如有充值需求，请提前做好资金安排，为此给您带来的不便，敬请谅解！
                             </div>
                         </div>

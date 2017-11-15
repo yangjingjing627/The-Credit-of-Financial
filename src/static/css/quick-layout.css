@@ -623,6 +623,15 @@ a {
 .pb40 {
   padding-bottom: 40px;
 }
+.pt60 {
+  padding-top: 60px;
+}
+.pb80 {
+  padding-bottom: 80px;
+}
+.pt80 {
+  padding-top: 80px;
+}
 .pl100 {
   padding-left: 100px;
 }
@@ -698,6 +707,9 @@ a {
   color: #fff;
 }
 
+.g_link {
+  color: #159BFE;
+}
 
 /* font-size */
 
@@ -752,6 +764,9 @@ a {
 .f30 {
   font-size: 30px;
 }
+.f32 {
+  font-size: 32px;
+}
 
 .f34 {
   font-size: 34px;
@@ -780,12 +795,18 @@ a {
 .f60 {
   font-size: 60px;
 }
+.f64 {
+  font-size: 64px;
+}
 
 .f70 {
   font-size: 70px;
 }
 
-
+/* font-weight */
+.fw300 {
+  font-weight: 300;
+}
 /* text-align */
 
 .tc {
