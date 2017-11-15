@@ -320,6 +320,6 @@ a { color: #333; text-decoration: none; }
 
 .box-sizing{ box-sizing: border-box;}
 .arrow_r {
-	background: url("../static/images/arrow_r.png") right center no-repeat;
+	background: url("../images/arrow_r.png") right center no-repeat;
 	background-size: 7.5px 15px;
 }
