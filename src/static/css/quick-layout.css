@@ -28,6 +28,16 @@
 	font-weight: 300;
 	color: #333;
 }
+/* 标题颜色 */
+.title_1 {
+	color: #333;
+}
+.title_2 {
+	color: #666;
+}
+.title_3 {
+	color: #999;
+}
 /*width  */
 .w300{width:300px;}
 .w480{width: 480px;}
@@ -322,4 +332,8 @@ a { color: #333; text-decoration: none; }
 .arrow_r {
 	background: url("../images/arrow_r.png") right center no-repeat;
 	background-size: 7.5px 15px;
+}
+.arrow_b {
+	background: url("../images/arrow_b.png") right center no-repeat;
+	background-size: 15px 7.5px;
 }

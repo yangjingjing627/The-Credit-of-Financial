@@ -7,29 +7,29 @@
         </div>
         <ul class="wrap">
             <li class="flexA">
-                <span>钱包所有者</span>
+                <span class="title_1">钱包所有者</span>
                 <input type="text" placeholder="" class="w440 db" v-model="walletOwner">
             </li>
             <li class="flexA">
-                <span>钱包创建行</span>
-                <input type="text" placeholder="" maxlength="20" class="w440 db" v-model="walletBank">
+                <span class="title_1">钱包创建行</span>
+                <input type="text" placeholder="" maxlength="20" class="w440 db arrow_b" v-model="walletBank">
             </li>
             <li class="flexA">
-                <span>钱包地址</span>
+                <span class="title_1">钱包地址</span>
                 <input type="text" placeholder="" maxlength="20" class="w440 db" v-model="walletAddr">
             </li>
         </ul>
         <ul class="wrap">
             <li class="flexA">
-                <span>银行预留手机号</span>
+                <span class="title_1">银行预留手机号</span>
                 <input type="tel" placeholder="" maxlength="11" class="w440 db" v-model="tel" @focus="errorMsg=='手机号格式错误'?errorMsg='':''">
             </li>
             <li class="flexA">
-                <span>短信验证码</span>
-                <div class="flexA w440 p0 rel">
+                <span class="title_1">短信验证码</span>
+                <div class="w440 p0 rel">
                     <input type="text" placeholder="" v-model="verifyCode" maxlength="6" @focus="errorMsg=='验证码错误'?errorMsg='':''">
-                    <div class="getCodeBtn abs right0 top30" v-if="code"><i class="blue">{{time}}s</i>重新获取</div>
-                    <div class="getCodeBtn abs right0 top30" v-else @click="getCode">获取验证码</div>
+                    <div class="getCodeBtn abs right0 top-10" v-if="code"><i class="blue">{{time}}s</i>重新获取</div>
+                    <div class="getCodeBtn abs right0 top-10" v-else @click="getCode">获取验证码</div>
                 </div>
             </li>
         </ul>
@@ -51,8 +51,8 @@
         right: 0px;
     }
 
-    .top30 {
-        top: 30px;
+    .top-10 {
+        top: -10px;
     }
 
     .topWar {
@@ -192,7 +192,7 @@
                        }else{
                           this.$toast(res.body.message,{
                               duration:2000
-                          }) 
+                          })
                        }
                    }).catch(res=>{
                        console.log(res)
