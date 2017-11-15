@@ -2,29 +2,31 @@
     <div class="moreDetail mt20">
         <div class="hd">
             <a @click="fActiveSection(0)" href="javascript:;"><span :class="{ active: section == 0 }">项目信息</span></a>
-            <a @click="fActiveSection(1)" href="javascript:;"><span :class="{ active: section == 1 }">区块概要</span></a>
+            <a @click="fActiveSection(1)" href="javascript:;"><span :class="{ active: section == 1 }">区块信息</span></a>
         </div>
         <div class="bd">
             <!--项目信息  -->
             <div class="proInfo" v-show="section == 0">
                 <dl>
-                    <dt>融资方介绍：</dt>
-                    <dd v-text="detailResult.borrowerDescription"></dd>
+                    <dt>融资方介绍</dt>
+                    <!-- <dd v-text="detailResult.borrowerDescription"></dd> -->
+                    <dd>你的就是刺激到处三叉神经菜市场你的就是刺激到处三叉神经菜市场你的就是刺激到处三叉神经菜市场你的就是刺激到处三叉神经菜市场</dd>
                 </dl>
-                <dl>
-                    <dt>征信信息：</dt>
+                <!-- <dl>
+                    <dt>征信信息</dt>
                     <dd v-text="detailResult.creditInformation"></dd>
                 </dl>
                 <dl>
-                    <dt>担保信息：</dt>
+                    <dt>担保信息</dt>
                     <dd v-text="detailResult.guaranteeInformation"></dd>
-                </dl>
+                </dl> -->
             </div>
-            <!--区块概要  -->
+            <!--区块信息  -->
             <div class="divOutline g6 f30" v-show="section == 1">
                 <div class="flexA">
                     <h5>区块高度</h5>
-                    <div class="w500">{{blockResult.blockNumber}}</div>
+                    <!-- <div class="w500">{{blockResult.blockNumber}}</div> -->
+                    <div class="w500">十几年三叉神经承诺书那才是</div>
                 </div>
                 <div class="flexA">
                     <h5>交易次数</h5>
@@ -36,7 +38,9 @@
                 </div>
                 <div class="flexA">
                     <h5>上一块哈希</h5>
-                    <div class="w500">{{blockResult.previousHash}}</div>
+                    <!-- <div class="w500">{{blockResult.previousHash}}</div> -->
+                    <div class="w500">十几年三叉神经承诺书那才是</div>
+                    
                 </div>
             </div>
         </div>
@@ -78,15 +82,17 @@
     }
 
     .moreDetail .bd dl dt {
-        padding: 38px 0;
+        padding: 14px 0 7px;
         font-size: 28px;
         color: #333;
     }
 
     .moreDetail .bd dl dd {
         color: #777;
-        line-height: 46px;
+        line-height: 40px;
         margin: 0;
+        font-size: 24px;
+        color: #999;
     }
 
     .moreDetail .bd dl .tab {
