@@ -11,7 +11,6 @@
         <!-- 驳回 -->
          <div class="inner flexBox" v-show="borrowState==52000">
             <div class="iconW reject"></div>
-            <!-- <p class="f34 l1 pt33">您提交的资料有误，请及时修改！</p> -->
             <p class="f34 l1 pt33">您提交的资料有误！</p>
             <!-- <router-link to="identityAuthen" class="btn mt40 modefiyBtn">修改资料</router-link> -->
          </div>
@@ -23,17 +22,20 @@
             <p class="f28 g9">请30天后再来申请吧！</p>
         </div>
         <!-- 通过 -->
-        <div class="inner flexBox f26 pass rel" v-show="status3">
+        <!-- <div class="inner flexBox f26 pass rel" v-show="status3"> -->
+        <div class="inner flexBox f26 pass rel" >
+
+
             <h3 class="passT">可借金额（元）</h3>
             <div class="lineA rel"></div>
             <div class="f70 g6 l1 mt80"><i class="f40">¥</i> {{money}}</div>
             <div class="g9 l1 pt22">期限{{time}}个月</div>
             <div class="lineB"></div>
-            <div class="f24 l1">有效期至：{{dataDue|dateFilter}}</div>
+            <div class="f24 l1 g3">有效期至：{{dataDue|dateFilter}}</div>
             <div class="f24 g9 l1 pt10">请在有效期内确认借款</div>
             <router-link :to="'loanContract?apcId='+applicationId+'&isShow=1'" class="btn w580 mt74 mb30">确认借款</router-link>
-            <div class="pb150">
-                <span>点击确认借款表示您同意签订<router-link :to="'loanContract?apcId='+applicationId+'&isShow=1'" class="red">《合同及相关协议》</router-link></span>
+            <div class="pb30 pt30">
+                <span class="g6 f28">点击确认借款表示您同意签订<router-link :to="'loanContract?apcId='+applicationId+'&isShow=1'" class="blue">《合同及相关协议》</router-link></span>
             </div>
             <svg width="100%" height="28" style="transform:rotate(180deg)" class="lineC abs">
                 <line x1="0" x2="1380" y1="0" y2="0"
@@ -42,28 +44,32 @@
         </div>
         <!-- 借款成功,正在汇款，目前无此状态-->
         <div class="inner flexBox f26 pass rel" v-show="borrowState==53000">
+        <!-- <div class="inner flexBox f26 pass rel"> -->
+
             <h3 class="passT">已借金额（元）</h3>
             <div class="lineA rel"></div>
             <div class="f70 g6 l1 mt80"><i class="f40">¥</i>{{money}}</div>
             <div class="remittance mb40 mt30"></div>
-            <div class="lineB"></div>
             <div class="f24 g9">款项正在汇往您的数字钱包账户，请耐心等待</div>
-            <div class="f24 g9 pb150">数字钱包地址：{{userInfo.walletAddress}}</div>
+            <div class="lineB"></div>
+            <div class="f24 g9 pb150">数字钱包地址：<span class="red">{{userInfo.walletAddress}}</span></div>
             <svg width="100%" height="28" style="transform:rotate(180deg)" class="lineC abs">
                 <line x1="0" x2="1380" y1="0" y2="0"
                       style="stroke:#f9f9f9;stroke-width:20;stroke-dasharray:1 30;stroke-linecap:round;"/>
             </svg>
         </div>
         <!-- 借款成功,最近一期还款计划 -->
-        <div class="inner flexBox f26 pass rel" v-show="borrowState==35000||borrowState==40000">
+        <!-- <div class="inner flexBox f26 pass rel" v-show="borrowState==35000||borrowState==40000"> -->
+        <div class="inner flexBox f26 pass rel" >
+
             <h3 class="passT">已借金额（元）</h3>
             <div class="lineA rel"></div>
             <div class="f70 g6 l1 mt80"><i class="f40">¥</i> {{money}}</div>
-            <!-- <div class="g9 l1 pt22">{{lastTime|fmtDate}} 应还金额 <span class="red">{{lastMoney}}</span> 元</div> -->
+            <div class="g9 l1 pt22">{{lastTime|fmtDate}} 应还金额 <span class="red">{{lastMoney}}</span> 元</div>
             <div class="btn w580 mt74 mb30" @click="toRepayPlan">还款计划</div>
             <div class="lineD mt50"></div>
             <div class="orange f24">按时还款保持良好信用</div>
-            <div class="g9 f24 mt20 pb86">数字钱包地址：{{userInfo.walletAddress}}</div>
+            <div class="g9 f24 mt20 pb86">数字钱包地址：<span class="red">{{userInfo.walletAddress}}</span></div>
             <svg width="100%" height="28" style="transform:rotate(180deg)" class="lineC abs">
                 <line x1="0" x2="1380" y1="0" y2="0"
                       style="stroke:#f9f9f9;stroke-width:20;stroke-dasharray:1 30;stroke-linecap:round;"/>
@@ -148,6 +154,9 @@
         border-radius: 50%;
         background: #f9f9f9
     }
+      .btn {
+        margin: 0 55px;
+      }
 
     .lineA:after {
         position: absolute;
@@ -177,6 +186,7 @@
         width: 448px;
         height: 30px;
         border-top: 1px dashed #E2E2E2;
+        margin-top: 30px;
     }
 
     .lineC {
@@ -209,13 +219,14 @@
     .lineD {
         width: 600px;
         height: 0;
-        border-top: 1px dashed #F6A623;
+        border-top: 1px dashed #A64F18;
     }
 
     .orange {
         padding: 0 10px;
         margin-top: -20px;
-        background: #fff
+        background: #fff;
+        color: #A64F18;
     }
 
     .pb86 {

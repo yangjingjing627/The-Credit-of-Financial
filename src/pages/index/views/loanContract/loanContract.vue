@@ -473,7 +473,9 @@
             <div class="btn w690 mt30" @click="pswDialog=true" v-if="isShow==1">同意本协议</div>
         </div>
         <!--输入银行数字安全密码  -->
-        <div class="pop" v-show="pswDialog">
+        <!-- <div class="pop" v-show="pswDialog"> -->
+        <div class="pop" >
+
             <div class="bankPwd">
                 <div class="title tc bbe">
                     <h2 class="f28">输入银行数字安全密码</h2>
@@ -539,7 +541,7 @@
 </template>
 <style lang="sass" scoped>
     .wrapBox {
-        height: 92%;
+        height: 100%;
         padding-top: 20px;
     }
 
@@ -726,5 +728,8 @@
         margin: 30px auto;
         text-indent: -1000px;
     }
+      b, p {
+        font-weight: 300;
+      }
 </style>
 <script src="./loanContract.js"></script>
