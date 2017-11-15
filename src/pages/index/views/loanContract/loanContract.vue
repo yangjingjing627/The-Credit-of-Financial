@@ -696,7 +696,7 @@
     }
 
     .keyboard .grayBg {
-        background-color: #d2d5da;
+        background-color: #F9F9F9;
     }
 
     .keyboard .keyItem:active {

@@ -12,6 +12,8 @@
             </div>
         </div>
         <div v-else class="go-to-lucky">
+          <!-- <div  class="go-to-lucky"> -->
+
             <ul class="norm-ul norm-ul-1">
                 <li><span></span>借款用途</li>
                 <li>
@@ -81,12 +83,14 @@
                     <li>{{ lucyDate.maxTime }}个月</li>
                 </ul>
             </div>
-            <p class="norm-ul mt30">
+            <p class="norm-ul pt64">
                 <span class="l mt15" @click="trial"></span>
                 <input class="btn r" :class="(amount>0)?'':'disabled'" type="button" value="我要申请" @click="applyFor">
             </p>
         </div>
         <div class="maskLayer abs" v-show="luckyFlag">
+        <!-- <div class="maskLayer abs" > -->
+
             <div class="dialogLucy f28">
                 <div class="bg-gradient h88 f32 gf rel">借款试算<span class="abs colse" @click="luckyFlag=false"></span>
                 </div>
@@ -233,7 +237,7 @@
             background-size:19px 21px;
           }
 
-        
+
         }
       }
         .norm-ul-2 {
@@ -251,15 +255,17 @@
             &:nth-child(2) {
             flex: 1;
             display: flex;
-            color: #FA5559;
+            // color: #FA5559;
             font-size: 36px;
             .data,input{
               flex: 1;
               margin-top:-10px;
               padding:0 12px 0 4px;
-              color: #FA5559;
               font-size: 48px;
               width:30px;
+            }
+            input {
+              color: #FA5559;
             }
             .editBtn{
               padding-right:44px;
@@ -285,15 +291,15 @@
         li:nth-child(1) {
           span {
             background:url("images/rmb.png") center no-repeat;
-            background-size:23px 23px;   
-            vertical-align:-4px;    
+            background-size:23px 23px;
+            vertical-align:-4px;
           }
         }
         li:nth-child(2) {
 
           span {
-            background: #30A4FF url(./images/edit.png) no-repeat center;
-            background-size: 26px 24px;
+            background:  url(./images/edit.png) no-repeat center;
+            background-size: 33px 28px;
           }
         }
       }
@@ -309,8 +315,8 @@
             text-align: right;
           }
             span {
-              background: #30A4FF url(./images/help.png) no-repeat center;
-              background-size: 18px 25px;
+              background:  url(./images/help.png) no-repeat center;
+              background-size: 40px 40px;
             }
           }
         }
@@ -320,17 +326,19 @@
         margin: 10px auto;
         padding: 0 42px;
         background: #fafafa;
+        background: #fff;
         border-radius: 6px;
+        border-top: 1px solid #eee;
       }
       p {
         span {
-          width: 55px;
-          height: 55px;
+          width: 80px;
+          height: 80px;
           background: url(./images/calculator.png) no-repeat center;
-          background-size: 55px 55px;
+          background-size: 100%;
         }
         input{
-          width:510px;
+          width:480px;
           line-height:88px;
         }
       }
@@ -381,8 +389,13 @@
         right:30px;top:30px;;
       }
     }
-    
+
   }
+    .lucky .go-to-lucky .norm-ul.pt64 {
+      padding-top: 64px;
+      border-top: 1px solid #eee;
+      margin:  0 10px;
+    }
     /*弹框样式开始*/
   .dialogBg{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4);z-index:9999;}
   .dialog1{margin:452px auto 0;padding:70px 0 30px 0;width:464px;background: #FFFFFF;
