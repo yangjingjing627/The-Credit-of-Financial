@@ -105,14 +105,22 @@
                 <router-link to="register" class="db f28 blue pt46 l1 pb1 bb">还未注册?</router-link>
             </div>
         </div>
+
         <div class='dialogBg' v-show="flag1">
             <div class="dialog1 flexBox">
                 <div class="warnIcon"></div>
                 <p class="f28 g6 pt30 pb50">{{msg}}</p>
-                <div>
-                    <div class="realNameBtn bdc" @click="fCloseDialog">取消</div>
-                    <router-link :to="where" class="realNameBtn gf bg-red ml20">确定</router-link>
-                </div>
+                <router-link :to="where" class="realNameBtn gf bg-red ml20">确定</router-link>
+                <div class="f28 g6" @click="fCloseDialog">取消</div>
+            </div>
+        </div>
+        <!-- 尚未绑定银行卡 -->
+        <div class='dialogBg' v-show="flag2">
+            <div class="dialog1 flexBox">
+                <div class="warnIcon"></div>
+                <p class="f28 g6 pt30 pb50">{{msg1}}</p>
+                <router-link :to="where" class="realNameBtn gf bg-red ml20">确定</router-link>
+                <div class="f28 g6" @click="fCloseDialog">取消</div>
             </div>
         </div>
     </div>
@@ -426,12 +434,13 @@
     /*未实名弹框样式开始*/
     .dialog1 {
         margin: 452px auto 0;
-        padding-top: 72px;
-        width: 454px;
-        height: 428px;
+        padding-top: 53px;
+        width: 574px;
+        height: 644px;
         background: #FFFFFF;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.21);
         border-radius: 8px;
+        margin-top: 313px;
     }
 
     .pb50 {
@@ -439,20 +448,22 @@
     }
 
     .warnIcon {
-        width: 92px;
-        height: 114px;
-        background: url("../static/images/realName1.png") center no-repeat;
-        background-size: 100%;
+        width: 329px;
+        height: 219px;
+        background: url("./images/dialog1.png") center no-repeat;
+        background-size: 329px 219px;
     }
 
     .realNameBtn {
-        display: inline-block;
-        width: 190px;
-        height: 58px;
-        line-height: 58px;
-        border-radius: 4px;
+        display: block;
+        width: 480px;
+        margin: 20px 47px 34px;
+        height: 98px;
+        line-height: 98px;
+        border-radius: 100px;
         font-size: 28px;
-        text-align: center
+        text-align: center;
+        box-shadow: 0px 22px 23px 0px rgba(250, 85, 89, 0.18);
     }
 
     .bdc {

@@ -22,8 +22,10 @@ export default {
             token: true,
             flag: false,//未登录弹框show
             flag1: false,//未实名和绑卡弹框show
+            flag2: true, //未绑卡弹框show
             loading: true,
             msg: '您尚未实名认证，请先去认证',
+            msg1: '您尚未绑定银行卡，请先去绑定',
             where: 'realNameAuth',
             userList: {},
             isDisabled: true,
@@ -34,7 +36,7 @@ export default {
         $router(to,from){
             if(to.name=='wallet'){
                 this.userInfo();
-                this.fIsRedeem(); 
+                this.fIsRedeem();
             }
         }
     },
@@ -89,7 +91,7 @@ export default {
                         this.flag1 = true;
                     }else{
                         this.$router.push({path: value});
-                    }                    
+                    }
                 }else{
                     this.$router.push({path: value});
                 }
