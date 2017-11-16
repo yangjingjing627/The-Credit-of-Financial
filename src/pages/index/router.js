@@ -236,6 +236,11 @@ const familyInfo = resolve => {
         resolve(require('./views/familyInfo/familyInfo.vue'))
     }, 'familyInfo')
 }
+const digitalAccountApplying = resolve => {
+    require.ensure(['./views/digitalAccountApplying/digitalAccountApplying.vue'], () => {
+        resolve(require('./views/digitalAccountApplying/digitalAccountApplying.vue'))
+    }, 'digitalAccountApplying')
+}
 // const repayPlan = resolve => {
 //     require.ensure(['./views/repayPlan/repayPlan.vue'], () => {
 //         resolve(require('./views/repayPlan/repayPlan.vue'))
@@ -691,6 +696,15 @@ const routeConfig = [
         meta: {
             back: true,
             midText: '身份认证'
+        }
+    },
+    {
+        path: '/digitalAccountApplying',
+        name: 'digitalAccountApplying',
+        component: digitalAccountApplying, //扫描身份证件认证
+        meta: {
+            back: true,
+            midText: '申请数字钱包账户'
         }
     },
     {
