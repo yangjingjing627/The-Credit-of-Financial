@@ -15,9 +15,9 @@
         </div>
         <div class="wrap">
             <div class="flexA">
-                <h5 class="f30">申购金额</h5>
+                <h5 class="f32 g3">申购金额</h5>
                 <div class="w520">
-                    <input type="text" placeholder="建议申购100元以上金额" name="amount" class="f28" v-model="amount"
+                    <input type="text" placeholder="建议申购100元以上金额" name="amount" class="f28 w440" v-model="amount"
                            @keyup="checkAmount(amount)"/>
                 </div>
             </div>
@@ -25,8 +25,8 @@
 
         <div class="errormsg tc pt20">{{errormsg}}</div>
 
-        <div class="content mt100">
-            <div class="btn" :class="{disabled : isDisabled}" @click="confirmPurchase">确认申购</div>
+        <div class="content mt180">
+            <div class="btn fw300" :class="{disabled : isDisabled}" @click="confirmPurchase">确认申购</div>
         </div>
 
         <!--密码弹框  -->
