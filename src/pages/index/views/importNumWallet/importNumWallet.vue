@@ -10,13 +10,14 @@
                     <span class="left">身份证号</span>
                     <input type="text" name="" v-model="idCardNumber" readonly="readonly">
                 </li>
-                <li class="bbe">
+                <li class="bbe arrow_r">
                     <span class="left bankIcon"></span>
                     <input type="text" name="" v-model='bank' readonly="readonly">
                 </li>
-                <li class="bbe">
+                <li class="bbe close">
                     <span class="left">卡号</span>
                     <input type="text" name="" v-model='cardNumber' readonly="readonly">
+                    <b @click="clearInput"></b>
                 </li>
                 <li class="bbe">
                     <span class="left">手机号</span>
@@ -28,7 +29,7 @@
                 </li>
             </ul>
             <div class="content">
-                <div class="btn" :class="nickname?'':'opacity'" @click="importWallet">
+                <div class="btn fw300" :class="nickname?'':'opacity'" @click="importWallet">
                     确定申请
                 </div>
             </div>
@@ -40,6 +41,7 @@
         height: 99px;
         overflow: hidden;
         font-size: 30px;
+        margin: 0 40px;
     }
 
     span {
@@ -56,7 +58,9 @@
     }
 
     span.left {
-        width: 236px;
+        width: 200px;
+        font-size: 32px;
+        color: #333;
     }
 
     .btn {
@@ -67,6 +71,18 @@
         height: 100%;
         background: url('../static/images/icon_bank.png') left center no-repeat;
         background-size: 42px 34px;
+    }
+    .close {
+      position: relative;
+      b {
+        position: absolute;
+        right: 0;
+        top: 35px;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background: #CCCCCC url('../static/images/close_icon.png') center no-repeat;
+      }
     }
 </style>
 <script src="./importNumWallet.js"></script>

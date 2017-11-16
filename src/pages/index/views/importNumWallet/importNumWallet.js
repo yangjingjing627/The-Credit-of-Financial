@@ -61,6 +61,9 @@ export default {
             ).catch(function (res) {
                 console.log(res);
             })
+        },
+        clearInput(){
+          this.cardNumber = ''
         }
     },
     components: {},
