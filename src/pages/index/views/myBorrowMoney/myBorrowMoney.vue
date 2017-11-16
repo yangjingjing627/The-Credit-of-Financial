@@ -7,7 +7,7 @@
                     <div class="flexA flexA_140">
                         <div>
                             <!-- <div class="f30">{{ item.loanName }}</div>  -->
-                            <div class="f30">招小财</div> 
+                            <div class="f30">招小财</div>
                             <div class="f24 g9">{{ item.loanTime }}</div>
                         </div>
                         <!-- <div class="f30 red"  v-if="item.loanStatus === '10'">发售中</div>
@@ -15,11 +15,11 @@
                         <div class="f30 gc"  v-else-if="item.loanStatus === '30'">已流标</div>
                         <div class="f30 red"  v-else-if="item.loanStatus === '40'">待还款</div>
                         <div class="f30 blue"  v-else-if="item.loanStatus === '50'">待扣还款</div>
-                        <div class="f30 blue"  v-else-if="item.loanStatus === '60'">已结清</div>
+                        <div class="f30 gc"  v-else-if="item.loanStatus === '60'">已结清</div>
                         <div class="f30 red"  v-else>已逾期</div> -->
                         <!-- 二期修改，先用这一个状态 -->
                         <div class="f30 blue">{{item.loanStatus}}</div>
-                        <span class="f30 g6" v-if="item.loanAmount">{{ item.loanAmount }}<i class="arrows ml20"></i></span>
+                        <span class="f30 g6" v-if="item.loanAmount">¥{{ item.loanAmount }}<i class="arrows ml20"></i></span>
                         <span class="f30 g6" v-else>— —<i class="arrows ml20"></i></span>
                     </div>
                 </router-link>
@@ -41,4 +41,4 @@
         color: #30A4FF;
     }
 </style>
-<script src="./myBorrowMoney.js"></script>
+<!-- <script src="./myBorrowMoney.js"></script> -->

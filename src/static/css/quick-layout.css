@@ -1186,8 +1186,8 @@ a {
   display: inline-block;
   width: 18px;
   height: 34px;
-  background: url("./../images/arrows.png") no-repeat center center;
-  background-size: 18px 34px;
+  background: url("./../images/arrow_r.png") no-repeat center center;
+  background-size: 15px 30px;
   position: relative;
   top: 8px;
 }
