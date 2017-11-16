@@ -35,6 +35,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="asset rel flexBox" v-show="authStatus==50&&token">
                 <div class="f26 g9"><span class="iconW iconW8"></span>总资产（元）</div>
                 <p class="f48 red">{{balance|toThousands}}</p>
@@ -137,9 +138,7 @@
         display: inline-block;
         width: 45px;
         height: 34px;
-        background: url("./images/iconA.png") 0 0 no-repeat;
-        background-size: 122px 483px;
-        vertical-align: -12px;
+        vertical-align: -8px;
         background-origin:content-box;
     }
 
@@ -186,12 +185,11 @@
     }
 
     .listW {
-        margin: 21px auto 0;
-        box-shadow: 0px 2px 16px 0px rgba(111, 31, 33, 0.1);
+        // box-shadow: 0px 2px 16px 0px rgba(111, 31, 33, 0.1);
         border-radius: 6px;
-        width: 690px;
         padding: 0 22px 0 28px;
         background: #fff;
+        margin-top: 20px;
     }
 
     .listW li {
@@ -202,6 +200,8 @@
         height: 100px;
         line-height: 100px;
         font-size: 30px;
+        color: #333;
+        font-weight: 300;
     }
 
     i {
@@ -219,10 +219,10 @@
     }
 
     .arrows {
-        margin-top: 42px;
-        width: 14px;
-        height: 18px;
-        background-size: 14px 18px;
+        margin-top: 28px;
+        // width: 14px;
+        // height: 18px;
+        background-size: 10px 20px;
     }
 
     /*已登录状态样式开始*/
@@ -344,22 +344,23 @@
     /*未登录状态样式结束*/
 
     .iconW4 {
-        background-position: 0 -261px;
-        vertical-align: -5px;
+      background: url("./images/bill_icon.png")  center no-repeat;
+      background-size: 28px 30px;
     }
 
     .iconW5 {
-        background-position: 0 -324px;
-        vertical-align: -6px;
+      background: url("./images/card_icon.png")  center no-repeat;
+      background-size: 28px 30px;
     }
 
     .iconW6 {
-        background-position: 0 -150px;
+      background: url("./images/finance_icon.png")  center no-repeat;
+      background-size: 28px 30px;
     }
 
     .iconW7 {
-        background-position: 0 -204px;
-        vertical-align: -8px;
+      background: url("./images/borrow_icon.png")  center no-repeat;
+      background-size: 28px 30px;
     }
 
     /*未登录弹框样式开始*/
