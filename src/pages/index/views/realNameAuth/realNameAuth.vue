@@ -40,13 +40,13 @@
         display: block;
         width: 88px;
         height: 31px;
-        background: url("./images/nameIcon.png") 0 0 no-repeat;
-        background-size: 29px 31px;
+        background: url("./images/nameIcon.png") 38px 0 no-repeat;
+        background-size: 21px 25px;
     }
 
     .idIcon {
-        background: url("./images/idIcon.png") 0 0 no-repeat;
-        background-size: 37px 31px;
+        background: url("./images/idIcon.png") 38px 0 no-repeat;
+        background-size: 32px 27px;
     }
 
     input {
