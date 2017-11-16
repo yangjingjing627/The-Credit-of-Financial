@@ -11,7 +11,7 @@
 
 					<span :class="item.isInput == 1 ? 'red' : 'blue'" class="f28">
 						<em v-if="item.isInput == 0">-</em><em v-else>+</em>
-						{{item.orderAmount | toThousands}}（QBM）<i class="arrows ml20"></i>
+						{{item.orderAmount | toThousands}}<i class="arrows ml20"></i>
 					</span>
 				</div>
 			</div>
@@ -29,27 +29,27 @@
 				</div>
 				<div class="wrap mt20 f30">
 					<div class="flexA">
-						<h5>交易类型</h5>
-						<div class="g6">{{ billDetails.orderType }}</div>
-						<div class="g6" v-if="billDetails.type == 'receive'">收款</div>
-						<div class="g6" v-if="billDetails.type == 'freeze'">冻结</div>
-						<div class="g6" v-if="billDetails.type == 'unfreeze'">解冻</div>
+						<h5 class="g3 f30">交易类型</h5>
+						<div class="g6 f30">{{ billDetails.orderType }}</div>
+						<div class="g6 f30" v-if="billDetails.type == 'receive'">收款</div>
+						<div class="g6 f30" v-if="billDetails.type == 'freeze'">冻结</div>
+						<div class="g6 f30" v-if="billDetails.type == 'unfreeze'">解冻</div>
 					</div>
 					<div class="flexA">
-						<h5>交易金额</h5>
-						<div class="g6 red">￥{{billDetails.orderAmount | toThousands}}</div>
+						<h5 class="g3 f30">交易金额</h5>
+						<div class="g6 f30 red">￥{{billDetails.orderAmount | toThousands}}</div>
 					</div>
 					<div class="flexA">
-						<h5>交易时间</h5>
-						<div class="g6">{{billDetails.createTime | formatDateTime}}</div>
+						<h5 class="g3 f30">交易时间</h5>
+						<div class="g6 f30">{{billDetails.createTime | formatDateTime}}</div>
 					</div>
 					<div class="flexA">
-						<h5>交易结果</h5>
-						<div class="g6">{{billDetails.dealResult}}</div>
+						<h5 class="g3 f30">交易结果</h5>
+						<div class="g6 f30">{{billDetails.dealResult}}</div>
 					</div>
 					<div class="flexA">
-						<h5>订单号</h5>
-						<div class="g6">{{billDetails.orderId}}</div>
+						<h5 class="g3 f30">订单号</h5>
+						<div class="g6 f30">{{billDetails.orderId}}</div>
 					</div>
 				</div>
 			</div>
@@ -65,7 +65,7 @@
 <style lang="sass" scoped>
 @import '../static/css/common.css';
 @import '../static/css/detail.css';
-.blue{color: #30A4FF;}
+.blue{color: #48D64F;}
 input {
 	display: block;
 	width: 60%;
