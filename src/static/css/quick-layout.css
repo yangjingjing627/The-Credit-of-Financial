@@ -841,7 +841,9 @@ a {
     width: 440px;
 }
 /* color  */
-
+.white{
+  color: #fff;
+}
 .red {
   color: #FA5559;
 }
@@ -863,6 +865,9 @@ a {
 
 .bg-white {
   background-color: #fff;
+}
+.bg-blue {
+  background-color: #159BFE;
 }
 
 

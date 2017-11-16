@@ -17,20 +17,20 @@
             <div class="flexA">
                 <div>
                     <span class="f30 pr30">赎回金额</span>
-                    <input type="text" placeholder="请输入赎回金额" name="amount" v-model="amount" @keyup="checkAmount(amount)"
+                    <input type="text" placeholder="请输入大于2元的金额" name="amount" v-model="amount" @keyup="checkAmount(amount)"
                            class="f28"/>
                 </div>
-                <div class="allRedeem blue f28 pr10" @click="allRedeem">全部赎回</div>
+                <div class="allRedeem white bg-blue f28 pr10 fw300" @click="allRedeem">全部赎回</div>
             </div>
         </div>
         <div class="content fix">
-            <span class="r g9 pt20 pr20">手续费：<i class="red">0.00</i>元</span>
+            <span class="r g9 pt20 pr20 f24">手续费：<i class="red">0.00</i>元</span>
         </div>
 
         <!-- 错误提示 -->
         <div class="errormsg tc">{{errormsg}}</div>
 
-        <div class="content mt100">
+        <div class="content mt120">
             <div class="btn" :class="{disabled : isDisabled}" @click="confirmRedeem">确认赎回</div>
         </div>
 
@@ -60,6 +60,14 @@
         display: inline-block;
         margin-right: 36px;
         border: 12px solid #f9f9f9;
+    }
+    .allRedeem {
+      width: 175px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-size: 24px;
+      border-radius: 100px;
     }
 </style>
 <script src="./redeem.js"></script>

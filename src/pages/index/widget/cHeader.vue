@@ -77,8 +77,8 @@
 <style lang="sass" scoped>
     .cheader {
         background-color: #fff;
-        height: 90px;
-        line-height: 90px;
+        height: 88px;
+        line-height: 88px;
         display: flex;
         align-items: center;
         /* transform:rotate(0); */
