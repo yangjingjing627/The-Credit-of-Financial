@@ -16,7 +16,7 @@
             <div class="flexA">
                 <div>
                     <span class="title icon_bank"></span>
-                    <span class="f28 bankName" :bankCode="bankCode" @click="fActiveSection(true)">{{bankName}}</span>
+                    <span class="f30 bankName g6" :bankCode="bankCode" @click="fActiveSection(true)">{{bankName}}</span>
                     <!-- <input type="text" class="f28" placeholder="请输入银行卡号" v-model="bankName"/> -->
                     <!-- 银行列表 -->
                     <div class="bankListWrap" v-show="section">
@@ -44,7 +44,8 @@
             <div class="flexA">
                 <div>
                     <span class="title">手机号</span>
-                    <input type="text" maxlength="11" class="f28" placeholder="请输入银行预留的手机号码" v-model="mobilePhone"/>
+                    <input type="text" maxlength="11" class="f28 w440" placeholder="请输入银行预留的手机号码" v-model="mobilePhone"/>
+                    <span class="arrow_r close"></span>
                 </div>
             </div>
             <div class="flexA">
@@ -61,29 +62,29 @@
         <div class="errormsg tc pt20">{{errormsg}}</div>
 
         <div class="content">
-            <div class="mt200">
-                <label class="g9">
+            <div >
+                <label class="g9 f28">
                     <input name="checkbox" type="checkbox" class="checkbox" checked/>
                     <span>我已阅读并同意<a href="javascript:;" class="blue">《代扣协议》</a></span>
                 </label>
             </div>
-            <div class="btn mt30" @click="bindBankFn">确认绑定</div>
+            <div class="btn mt80" @click="bindBankFn">绑定申请</div>
         </div>
     </div>
 </template>
 <style lang="sass" scoped>
     .title {
-        font-size: 30px;
+        font-size: 32px;
         color: #333;
         width: 140px;
         display: inline-block;
     }
 
     .icon_bank {
-        background: url(../static/images/icon_bank.png) no-repeat left 6px;
+        background: url(images/icon_bank.png) no-repeat left 20px;
         width: 140px;
-        height: 40px;
-        background-size: 42px 34px;
+        height: 50px;
+        background-size: 32px 27px;
     }
 
     .checkbox {
@@ -97,7 +98,7 @@
     }
 
     .checkbox:checked {
-        background: #fff url(images/icon_checked.png) no-repeat center;
+        background: #159BFE url(images/icon_checked.png) no-repeat center;
         background-size: 22px 19px;
     }
 
@@ -162,6 +163,9 @@
         width: 490px;
         display: inline-block;
         padding-left: 14px;
+    }
+    .close {
+
     }
 </style>
 <script src="./bindBank.js"></script>

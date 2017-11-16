@@ -18,7 +18,8 @@
 /*上下居中，左右两端对齐*/
 
 .flexA {
-  height: 100px;
+  /*height: 100px;*/
+  height: 110px;
   border-bottom: 1px solid #eee;
   display: -webkit-flex;
   display: -webkit-box;
@@ -373,7 +374,9 @@ a {
 .mt60 {
   margin-top: 60px;
 }
-
+.mt80 {
+  margin-top: 80px;
+}
 .mt100 {
   margin-top: 100px;
 }
@@ -420,6 +423,7 @@ a {
   margin-bottom: 15px;
 }
 
+
 .mb20 {
   margin-bottom: 20px;
 }
@@ -431,7 +435,9 @@ a {
 .mb40 {
   margin-bottom: 40px;
 }
-
+.mb80 {
+  margin-bottom: 80px;
+}
 
 /* padding */
 
