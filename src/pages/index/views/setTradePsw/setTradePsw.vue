@@ -2,11 +2,11 @@
     <div>
         <ul class="wrap">
             <li class="flexA">
-                <span>交易密码</span>
+                <span class="f30 g6">交易密码</span>
                 <input type="tel" class="w440 db" v-model="psw1" placeholder="请输入6位数字" maxlength="6">
             </li>
             <li class="flexA">
-                <span>确认交易密码</span>
+                <span class="f30 g6">确认交易密码</span>
                 <input type="tel" placeholder="请再次输入6位数字" maxlength="6" class="w440 db" v-model="psw2">
             </li>
         </ul>
@@ -26,7 +26,7 @@
     }
 
     .f24 {
-        padding: 20px 0 88px 40px;
+        padding: 20px 0 170px 40px;
         line-height: 1;
     }
 
