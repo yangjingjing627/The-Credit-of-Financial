@@ -4,20 +4,20 @@
             <li class="flexA bbe pl30">
                 <!-- <router-link to="wallet" class="flexA bbe pl30"> -->
                 <div class="aboutUs">关于我们</div>
-                <div class="arrows"></div>
+                <div class="arrow_r"></div>
                 <!-- </router-link> -->
             </li>
             <li class="flexA bbe pl30">
                 <!-- <router-link to="wallet" class="flexA bbe pl30"> -->
                 <div class="aboutUs server">客户服务</div>
-                <div class="arrows"></div>
+                <div class="arrow_r"></div>
                 <!-- </router-link> -->
             </li>
             <li class="flexA bbe pl30">
                 <!-- <router-link to="wallet" class="flexA bbe pl30"> -->
                 <div class="aboutUs version">当前版本</div>
-                <div>
-                    1.0.1<i class="arrows ml20"></i>
+                <div class="g6 f32">
+                    1.0.1<i class="arrow_r ml20"></i>
                 </div>
                 <!-- </router-link> -->
             </li>
@@ -29,27 +29,29 @@
 </template>
 <style lang="sass" scoped>
     .wrap {
-        margin-bottom: 282px;
+        margin-bottom: 450px;
     }
 
     .aboutUs {
         padding-left: 64px;
-        background: url("./images/setIcon.png") 0 0 no-repeat;
-        background-size: 37px 151px;
-        font-size: 28px;
-        color: #5f616b;
+        background: url("./images/about_icon.png") left center no-repeat;
+        background-size: 38px 38px;
+        font-size: 32px;
+        color: #333;
     }
 
     .server {
-        background-position: 0 -50px;
-    }
+      background: url("./images/serve_icon.png") left center no-repeat;
+      background-size: 38px 38px;    }
 
     .version {
-        background-position: 0 -112px;
+      background: url("./images/copy_icon.png") left center no-repeat;
+      background-size: 38px 38px;
     }
-
-    .arrows {
+    .arrow_r {
         display: inline-block;
+        width: 15px;
+        height: 30px;
     }
 </style>
 <script src="./settings.js"></script>
