@@ -5,12 +5,10 @@
                 <div class="ph ph-banner"></div>
             </div>
             <div v-show="!loading">
-                <div class="bg-gradient_1 f34 pt310" v-if="!token">
-                    <div class="dec"></div>
-                    <div class="login-con arrow_r">
-                      <router-link class="f40 g3" to="login">立即登录</router-link>
-                      <div class="tl f28 g9">马上登录开启财富管理</div>
-                    </div>
+                <div class="bg-gradient f34 pt310" v-if="!token">
+                    <div class="decoration"></div>
+                    <router-link to="login" class="loginBtn">立即登录</router-link>
+                    <div class="gf tc">马上登录开启财富管理</div>
                 </div>
                 <div class="flexBox bg-gradient pt163" :class="{finished:authStatus==50}" v-else>
                     <div class="decoration"></div>
@@ -145,8 +143,7 @@
     }
 
     .bg-gradient {
-        // height: 466px;
-        height: 300px;
+        height: 466px;
     }
 
     .pt163 {
@@ -464,21 +461,5 @@
     }
 
     /*未实名弹框样式结束*/
-    .bg-gradient_1 {
-      display: flex;
-      background: #fff;
-      padding: 60px 40px 100px;
-    }
-    .dec {
-      width: 113px;
-      height: 113px;
-      background: url("./images/man_icon.png") center no-repeat;
-      background-size: 100%;
-    }
-    .login-con {
-      flex: 1;
-      padding-left: 28px;
-      box-sizing: border-box;
-    }
 </style>
 <script src="./wallet.js"></script>
