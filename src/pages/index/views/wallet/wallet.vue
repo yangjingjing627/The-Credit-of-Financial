@@ -117,7 +117,7 @@
         <!-- 尚未绑定银行卡 -->
         <div class='dialogBg' v-show="flag2">
             <div class="dialog1 flexBox">
-                <div class="warnIcon"></div>
+                <div class="warnIcon2"></div>
                 <p class="f28 g6 pt30 pb50">{{msg1}}</p>
                 <router-link :to="where" class="realNameBtn gf bg-red ml20">确定</router-link>
                 <div class="f28 g6" @click="fCloseDialog">取消</div>
@@ -450,7 +450,13 @@
     .warnIcon {
         width: 329px;
         height: 219px;
-        background: url("./images/dialog1.png") center no-repeat;
+        background: url("./images/dialog.png") center no-repeat;
+        background-size: 329px 219px;
+    }
+    .warnIcon2 {
+        width: 329px;
+        height: 219px;
+        background: url("./images/dialog2.png") center no-repeat;
         background-size: 329px 219px;
     }
 
@@ -478,7 +484,7 @@
     .bg-gradient_1 {
       display: flex;
       background: #fff;
-      padding: 60px 40px 100px;
+      padding: 100px 40px 100px;
     }
     .dec {
       width: 113px;
