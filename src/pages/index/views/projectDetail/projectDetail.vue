@@ -90,7 +90,7 @@
 
         <!--计算器键盘  -->
         <div class="calculatorPop" v-show="calculator==true">
-            <div class="calculator J_calculator">
+            <div class="calculator J_calculator pt20">
                 <span class="closePop" @click="calculatorClose"></span>
                 <h3 class="f32 g3 dialog-title">计算收益</h3>
                 <div class="operateArea">
@@ -391,7 +391,7 @@
     .calculator .closePop {
         position: absolute;
         left: 0px;
-        top: 0px;
+        top: 20px;
         display: block;
         width: 28px;
         height: 28px;

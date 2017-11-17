@@ -65,7 +65,7 @@
           <div class="pop">
 
             <div class="bankPwd">
-                <div class="title tc bbe">
+                <div class="title tc bbe pt20">
                     <h2 class="f32 g3">输入银行数字安全密码</h2>
                     <span class="icon_arrow" @click="goLastStep"></span>
                 </div>
@@ -148,7 +148,7 @@
         width: 95px;
         height: 90px;
         position: absolute;
-        top: 0;
+        top: 20px;
         left: 0;
         background: url(../../widget/images/icon_arrow_left.png) no-repeat center;
         background-size: 22px 40px;
