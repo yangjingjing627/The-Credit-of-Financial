@@ -241,11 +241,11 @@ const digitalAccountApplying = resolve => {
         resolve(require('./views/digitalAccountApplying/digitalAccountApplying.vue'))
     }, 'digitalAccountApplying')
 }
-// const repayPlan = resolve => {
-//     require.ensure(['./views/repayPlan/repayPlan.vue'], () => {
-//         resolve(require('./views/repayPlan/repayPlan.vue'))
-//     }, 'repayPlan')
-// }
+const repayPlan = resolve => {
+    require.ensure(['./views/repayPlan/repayPlan.vue'], () => {
+        resolve(require('./views/repayPlan/repayPlan.vue'))
+    }, 'repayPlan')
+}
 
 const routeConfig = [
     {path: '/', redirect: '/home'},
@@ -671,15 +671,15 @@ const routeConfig = [
             midText: '我要借款'
         }
     },
-    // {
-    //     path: '/repayPlan',
-    //     name: 'repayPlan',
-    //     component: repayPlan, //还款计划页面
-    //     meta: {
-    //         back: true,
-    //         midText: '我要借款'
-    //     }
-    // },
+    {
+        path: '/repayPlan',
+        name: 'repayPlan',
+        component: repayPlan, //还款计划页面
+        meta: {
+            back: true,
+            midText: '我要借款'
+        }
+    },
     {
         path: '/digitalInfoAuth',
         name: 'digitalInfoAuth',
