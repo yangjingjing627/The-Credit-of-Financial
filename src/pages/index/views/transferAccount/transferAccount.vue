@@ -4,20 +4,20 @@
         <div v-show="step1">
             <div class="wrap bg-white">
                 <div class="flexA">
-                    <h5 class="title-a f30 g3">转入钱包</h5>
-                    <div class="con-a f30 w480">
-                        <input type="text" class="input tr qrcode_icon" placeholder="" value="hbdhsbdshds" v-model="walletAddress"/>
+                    <h5 class="f30 g3">转入钱包</h5>
+                    <div class="f30 w480">
+                        <input type="text" class="input tr qrcode_icon" placeholder="" v-model="walletAddress"/>
                     </div>
                 </div>
                 <div class="flexA">
-                    <h5 class="title-a f30 g3">转入金额</h5>
-                    <div class="con-a f30 w480">
+                    <h5 class="f30 g3">转入金额</h5>
+                    <div class="f30 w480">
                         <input type="text" class="input tr" placeholder="" v-model="amount"/>
                     </div>
                 </div>
                 <div class="flexA">
-                    <h5 class="title-a f30 g3">备注</h5>
-                    <div class="con-a f30 w480">
+                    <h5 class="f30 g3">备注</h5>
+                    <div class="f30 w480">
                         <input type="text" class="input tr" placeholder="" v-model="log"/>
                     </div>
                 </div>
@@ -33,25 +33,25 @@
         <div class="pop" v-show="step2">
             <div class="payDetail">
                 <div class="title tc">
-                    <h2 class="f28">支付详情</h2>
+                    <h2 class="f32 g3">支付详情</h2>
                     <span class="closePop" @click="close"></span>
                 </div>
                 <div class="wrap">
                     <div class="flexA f28">
-                        <h5 class="title-a g3">转账金额：</h5>
-                        <div class="con-a w480">{{amount}}</div>
+                        <h5 class="f32 g3">转账金额：</h5>
+                        <div class="w480 f30 g6 tr">{{amount}}whejwejew</div>
                     </div>
                     <div class="flexA">
-                        <h5 class="title-a g3">转入钱包：</h5>
-                        <div class="con-a w480">{{walletAddress}}</div>
+                        <h5 class="f32 g3">转入钱包：</h5>
+                        <div class="w480 f30 g6 tr">{{walletAddress}}</div>
                     </div>
                     <div class="flexA">
-                        <h5 class="title-a g3">付款钱包：</h5>
-                        <div class="con-a w480">{{userResult.walletAddress}}</div>
+                        <h5 class="f32 g3">付款钱包：</h5>
+                        <div class="w480 f30 g6 tr">{{userResult.walletAddress}}</div>
                     </div>
                     <div class="flexA">
-                        <h5 class="title-a g3">备注：</h5>
-                        <div class="con-a w480">{{log}}</div>
+                        <h5 class="f32 g3">备注：</h5>
+                        <div class="w480 f30 g6 tr">{{log}}</div>
                     </div>
                 </div>
                 <div class="content">
@@ -61,10 +61,12 @@
         </div>
 
         <!--输入银行数字安全密码  -->
-        <div class="pop" v-show="step3">
+        <!-- <div class="pop" v-show="step3"> -->
+          <div class="pop">
+
             <div class="bankPwd">
                 <div class="title tc bbe">
-                    <h2 class="f28">输入银行数字安全密码</h2>
+                    <h2 class="f32 g3">输入银行数字安全密码</h2>
                     <span class="icon_arrow" @click="goLastStep"></span>
                 </div>
                 <div class="bd">
@@ -75,50 +77,50 @@
                     </ul>
                 </div>
                 <div class="forget">
-                    <router-link :to="{path:'forgotTradePsw',query:{plan:'transferAccount'}}" class="blue">忘记交易密码？</router-link>
+                    <router-link :to="{path:'forgotTradePsw',query:{plan:'transferAccount'}}" class="f28 fw300 blue">忘记交易密码？</router-link>
                 </div>
                 <!--键盘  -->
                 <ul class="keyboard fix tc">
                     <li class="keyItem" @click="numStack('1')">
-                        <p>1</p>
+                        <p class="f56 g3">1</p>
                     </li>
                     <li class="keyItem colCenter" @click="numStack('2')">
-                        <p>2</p>
+                        <p class="f56 g3">2</p>
                         <p class="enLetter">ABC</p>
                     </li>
                     <li class="keyItem" @click="numStack('3')">
-                        <p>3</p>
+                        <p class="f56 g3">3</p>
                         <p class="enLetter">DEF</p>
                     </li>
                     <li class="keyItem" @click="numStack('4')">
-                        <p>4</p>
+                        <p class="f56 g3">4</p>
                         <p class="enLetter">GHI</p>
                     </li>
                     <li class="keyItem colCenter" @click="numStack('5')">
-                        <p>5</p>
+                        <p class="f56 g3">5</p>
                         <p class="enLetter">JKL</p>
                     </li>
                     <li class="keyItem" @click="numStack('6')">
-                        <p>6</p>
+                        <p class="f56 g3">6</p>
                         <p class="enLetter">MNO</p>
                     </li>
                     <li class="keyItem" @click="numStack('7')">
-                        <p>7</p>
+                        <p class="f56 g3">7</p>
                         <p class="enLetter">PQRS</p>
                     </li>
                     <li class="keyItem colCenter" @click="numStack('8')">
-                        <p>8</p>
+                        <p class="f56 g3">8</p>
                         <p class="enLetter">TUV</p>
                     </li>
                     <li class="keyItem" @click="numStack('9')">
-                        <p>9</p>
+                        <p class="f56 g3">9</p>
                         <p class="enLetter">WXYZ</p>
                     </li>
                     <li class="keyItem grayBg" @click="numStack('.')">
                         <p class="keyDot">.</p>
                     </li>
                     <li class="keyItem colCenter" @click="numStack('0')">
-                        <p class="keyZero">0</p>
+                        <p class="keyZero f56 g3">0</p>
                     </li>
                     <li class="keyItem grayBg" @click="numStack('deleteNum')">
                         <span class="keydel"></span>
@@ -153,10 +155,10 @@
     }
 
     .bankPwd .bd {
-        border: 1px solid #bdbdbd;
+        border: 1px solid #eee;
         width: 633px;
-        margin: 50px auto 30px auto;
-        overflow: hidden;
+        margin: 20px auto 30px auto;
+        border-radius: 100px;
     }
 
     .bankPwd li {
@@ -199,7 +201,7 @@
     }
 
     .content {
-        padding: 100px 0;
+        padding: 50px 0;
     }
 
     .closePop {
@@ -241,7 +243,7 @@
         padding-top: 16px;
         height: 96px;
         width: 33%;
-        border-bottom: 1px solid #8c8c8c;
+        border-bottom: 1px solid #eee;
         color: #000;
         line-height: 36px;
         font-size: 40px;
@@ -251,7 +253,7 @@
         width: 34%;
         border-width: 0 1px 1px;
         border-style: solid;
-        border-color: #8c8c8c;
+        border-color: #eee;
     }
 
     [data-dpr="1"] .keyboard .colCenter {
@@ -259,12 +261,12 @@
     }
 
     .keyboard .keyItem .enLetter {
-        color: #030303;
-        font-size: 22px;
+      color: #666;
+      font-size: 20px;
     }
 
     .keyboard .grayBg {
-        background-color: #d2d5da;
+        background-color: #F9F9F9;
     }
 
     .keyboard .keyItem:active {
@@ -277,9 +279,8 @@
 
     .keyboard .keydel {
         display: inline-block;
-        margin-top: 14px;
-        width: 46px;
-        height: 34px;
+        width: 77px;
+        height: 56px;
         background: url(./images/icon_keydel.png) no-repeat;
         background-size: 100% 100%;
     }

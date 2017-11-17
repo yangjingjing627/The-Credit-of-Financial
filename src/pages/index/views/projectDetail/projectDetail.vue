@@ -89,9 +89,7 @@
         </div>
 
         <!--计算器键盘  -->
-        <!-- <div class="calculatorPop" v-show="calculator==true"> -->
-        <div class="calculatorPop">
-
+        <div class="calculatorPop" v-show="calculator==true">
             <div class="calculator J_calculator">
                 <span class="closePop" @click="calculatorClose"></span>
                 <h3 class="f32 g3 dialog-title">计算收益</h3>
