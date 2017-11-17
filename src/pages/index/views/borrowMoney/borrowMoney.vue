@@ -3,7 +3,8 @@
         <div class="banner"></div>
         <!--banner1 -->
         <!-- 审核中 -->
-        <div class="inner flexBox" v-show="borrowState==1100">
+        <!-- <div class="inner flexBox" v-show="borrowState==1100"> -->
+        <div class="inner flexBox">
             <div class="iconW"></div>
             <p class="f34 l1 pt33">信用额度计算中……</p>
             <p class="f28 g9 pt40 l1">预计1-2个工作日审核完毕</p>
@@ -22,10 +23,8 @@
             <p class="f28 g9">请30天后再来申请吧！</p>
         </div>
         <!-- 通过 -->
-        <!-- <div class="inner flexBox f26 pass rel" v-show="status3"> -->
-        <div class="inner flexBox f26 pass rel" >
-
-
+        <div class="inner flexBox f26 pass rel" v-show="status3">
+        <!-- <div class="inner flexBox f26 pass rel" > -->
             <h3 class="passT">可借金额（元）</h3>
             <div class="lineA rel"></div>
             <div class="f70 g6 l1 mt80"><i class="f40">¥</i> {{money}}</div>
@@ -44,8 +43,6 @@
         </div>
         <!-- 借款成功,正在汇款，目前无此状态-->
         <div class="inner flexBox f26 pass rel" v-show="borrowState==53000">
-        <!-- <div class="inner flexBox f26 pass rel"> -->
-
             <h3 class="passT">已借金额（元）</h3>
             <div class="lineA rel"></div>
             <div class="f70 g6 l1 mt80"><i class="f40">¥</i>{{money}}</div>
@@ -59,8 +56,8 @@
             </svg>
         </div>
         <!-- 借款成功,最近一期还款计划 -->
-        <!-- <div class="inner flexBox f26 pass rel" v-show="borrowState==35000||borrowState==40000"> -->
-        <div class="inner flexBox f26 pass rel" >
+        <div class="inner flexBox f26 pass rel" v-show="borrowState==35000||borrowState==40000">
+        <!-- <div class="inner flexBox f26 pass rel" > -->
 
             <h3 class="passT">已借金额（元）</h3>
             <div class="lineA rel"></div>
