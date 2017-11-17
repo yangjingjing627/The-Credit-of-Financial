@@ -2,25 +2,25 @@
     <div class="joinWrap vueTpl mt20 rel">
         <form action="#" class="projectBidForm" method="post" @submit.prevent="">
             <div class="joinItem">
-                <div class="itemR">￥<span class="red">{{qbm | toThousands}}</span>
+                <div class="itemR"><span class="red fw300">{{qbm | toThousands}}<b class="f28 g6 fw300">(QBM)</b></span>
                 </div>
                 <span class="itemTitle">剩余可投金额：</span>
             </div>
-            <div class="joinItem mt10">
+            <div class="joinItem joinItem_1 mt10">
                 <span class="itemTitle">输入金额：</span>
                 <div class="amountInfo">
-                    <p class="f20 g9 pt5"><span v-text="proList.startInvestAmount"></span>元起投，以<span
+                    <p class="f24 g9 pt5"><span v-text="proList.startInvestAmount"></span>元起投，以<span
                             v-text="proList.increaseInvestAmount"></span>元的整数倍递增</p>
                     <div class="inputMoney">
                         <input type="text" name="amount" v-model="amount" class="input f50"/>
                         <span class="subBtn" @click="subMoney"></span>
                         <span class="addBtn" @click="addMoney"></span>
                     </div>
-                    <div class="balance fix mt50 f28">
+                    <div class="balance fix mt20 f28">
                         <div class="itemR">
-                            <a href="javascript:;" class="blue f26" @click="allPut">余额全投</a>
+                            <a href="javascript:;" class="gf bg-blue f26 border-radius" @click="allPut">余额全投</a>
                         </div>
-                        <span class="g9">您的账户余额：</span>
+                        <span class="g9 f24">您的账户余额：</span>
                         <span class="red">{{userList.usableAmount | toThousands}}</span>元
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                 <label>
                     <input type="checkbox" name="agree" checked="checked" datatype="verifyChecked" nullmsg="您尚未同意协议"
                            class="protocol jsInputCheck">我已阅读并同意
-                    <a href="#" data-name="withhold" class="agreementLink blue">《区块链金融理财产品购买协议》</a>
+                    <a href="#" data-name="withhold" class="agreementLink red">《区块链金融理财产品购买协议》</a>
                 </label>
             </div>
             <div class="joinPlan content">
@@ -132,24 +132,26 @@
 
     .amountInfo .inputMoney {
         position: relative;
-        margin-top: 60px;
+        margin-top: 40px;
         padding: 0 80px;
-        height: 86px;
+        height: 98px;
+        border-radius: 50px;
+        border: 1px solid #eee;
     }
 
     .amountInfo .inputMoney .subBtn, .amountInfo .inputMoney .addBtn {
         position: absolute;
-        top: 1px;
         border: 1px solid #ddd;
-        width: 80px;
-        height: 85px;
+        width: 84px;
+        height: 84px;
+        background: #F9F9F9;
+        border-radius: 50%;
         cursor: pointer;
     }
 
     .amountInfo .inputMoney .subBtn {
-        left: 0;
-        border-radius: 1px 1px 0 1px;
-        -webkit-border-radius: 1px 1px 0 1px;
+        top: 5px;
+        left: 5px;
     }
 
     .subBtn:before {
@@ -166,9 +168,8 @@
     }
 
     .amountInfo .inputMoney .addBtn {
-        right: 0;
-        border-radius: 1px 1px 1px 0;
-        -webkit-border-radius: 1px 1px 1px 0;
+        right: 5px;
+        top: 5px;
     }
 
     .addBtn:before, .addBtn:after {
@@ -202,9 +203,8 @@
     }
 
     .isAgree {
-        margin-top: 100px;
         color: #777;
-        padding: 0 0 28px 40px;
+        padding: 0 0 0px 40px;
     }
 
     .protocol {
@@ -251,6 +251,21 @@
 
     .icon_close:after {
         transform: rotate(-45deg);
+    }
+    .border-radius {
+      display: block;
+      width: 160px;
+      height: 60px;
+      border-radius: 100px;
+      line-height: 60px;
+      text-align: center;
+      font-weight: 300;
+    }
+    .joinItem_1 {
+      padding-bottom: 0;
+    }
+    .content {
+      margin-top: 160px;
     }
 </style>
 <script src="./buyNow.js"></script>
