@@ -59,9 +59,9 @@ export default {
                 })
             }else{
                 this. showPage();
-            }  
+            }
         },
-        showPage(){//根据url传过来的状态显示页面  
+        showPage(){//根据url传过来的状态显示页面
              if (this.borrowState == 20000) {//待签约
                 this.status3=true;
                 this.getUserInfo();
@@ -70,7 +70,7 @@ export default {
                 this.getUserInfo();
                 this.inquireAmount();//查询可借金额接口，渲染已借金额
             }
-    
+
         },
         repayLast(){//获取最近一期还款计划,接口不能用
             this.$http.get(api.loanIntention + this.applicationId+"/repayLast?QB_AUTH_TOKEN=" + this.gToken).then(res => {
@@ -108,12 +108,15 @@ export default {
             }).catch(res=>{
                 console.log(res);
             })
+        },
+        fLeftClick(){
+          this.$router.go(-1);
         }
     },
     components: {},
     filters: {
         fmtDate,
-        dateFilter(time){ 
+        dateFilter(time){
             if(time){
                 return time.substr(0,4) + "年" + time.substr(4,2) + "月" + time.substr(6,2) + "日";
             }

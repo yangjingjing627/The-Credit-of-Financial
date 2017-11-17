@@ -815,6 +815,9 @@ a {
 .f70 {
   font-size: 70px;
 }
+.f72 {
+  font-size: 72px;
+}
 
 /* font-weight */
 .fw300 {
@@ -1204,4 +1207,8 @@ a {
 .arrow_b {
   background: url("../images/arrow_b.png") right center no-repeat;
   background-size: 30px 15px;
+}
+.arrow_l {
+  background: url("../images/left_icon.png") no-repeat center;
+  background-size: 14px 28px;
 }

@@ -1,26 +1,30 @@
 <template>
     <div class="f26">
-        <div class="banner"></div>
+        <div class="banner">
+          <p class="gf f34 tc fw300"><span @click="fLeftClick" class="arrow_l"></span>我要借款</p>
+          <div class="max-loads gf f72 tc pt85 fw300">最高可贷50万</div>
+          <div class="loads-con gf f36 tc fw300">资金短缺不用愁 我们替你解忧愁</div>
+        </div>
         <!--banner1 -->
         <!-- 审核中 -->
-        <!-- <div class="inner flexBox" v-show="borrowState==1100"> -->
-        <div class="inner flexBox">
+        <div class="inner flexBox" v-show="borrowState==1100">
             <div class="iconW"></div>
-            <p class="f34 l1 pt33">信用额度计算中……</p>
-            <p class="f28 g9 pt40 l1">预计1-2个工作日审核完毕</p>
+            <p class="f32 g6 l1 pt80 pb40">信用额度计算中……</p>
+            <p class="f28 g9 l1">预计1-2个工作日审核完毕</p>
         </div>
         <!-- 驳回 -->
          <div class="inner flexBox" v-show="borrowState==52000">
             <div class="iconW reject"></div>
-            <p class="f34 l1 pt33">您提交的资料有误！</p>
-            <!-- <router-link to="identityAuthen" class="btn mt40 modefiyBtn">修改资料</router-link> -->
+            <p class="f32 g6 l1 pt80 pb40 fw300">您提交的资料有误,请及时修改!</p>
+            <router-link to="identityAuthen" class="btn mt40 modefiyBtn">修改资料</router-link>
          </div>
         <!-- 拒贷 -->
-        <div class="inner flexBox" v-show="borrowState==53500">
+        <!-- <div class="inner flexBox" v-show="borrowState==53500"> -->
+        <div class="inner flexBox">
             <div class="iconW refuse"></div>
-            <p class="f34 l1 pt33">加油吧！老板</p>
-            <p class="f28 g9 pt40 l1">业绩更上一层楼，才能提升您的信用评分</p>
-            <p class="f28 g9">请30天后再来申请吧！</p>
+            <p class="f32 g6 l1 pt80 fw300">您的申请未通过!</p>
+            <p class="f28 g9 l1 pt60">业绩更上一层楼，才能提升您的信用评分</p>
+            <p class="f28 g3 pt20">请30天后再来申请吧！</p>
         </div>
         <!-- 通过 -->
         <div class="inner flexBox f26 pass rel" v-show="status3">
@@ -76,32 +80,54 @@
 </template>
 <style lang="sass" scoped>
     @import '../static/css/common.css';
-
+    .f26 {
+      height: 100%;
+      background-color: white;
+      // position: relative;
+    }
     .banner {
+        position: absolute;
+        left: 0;
+        top: 0px;
         width: 100%;
-        height: 280px;
+        height: 498px;
         background: url("images/borrowBanner.png") center no-repeat;
-        background-size: 100%;
+        background-size: 100% contain;
+        p {
+          height: 88px;
+          line-height: 88px;
+          position: relative;
+          span {
+            display: block;
+            height: 28px;
+            width: 28px;
+            position: absolute;
+            left: 20px;
+            top: 24px;
+            padding: 24px 20px;
+          }
+        }
     }
 
     .inner {
-        margin: -78px auto 0;;
-        width: 690px;
+        padding-top: 505px;
         height: 780px;
         background: #FFFFFF;
-        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.09);
-        border-radius: 3px;
-        padding-top: 154px;
     }
 
     .pt33 {
         padding-top: 33px;
     }
 
+    .pt85 {
+      padding-top: 85px;
+      bpx-sizing: border-box;
+    }
     /*审核中*/
     .iconW {
-        width: 456px;
-        height: 328px;
+        width: 400px;
+        height: 275px;
+        margin: 0 auto;
         background: url("images/verifying.png") center no-repeat;
         background-size: 100%;
     }
