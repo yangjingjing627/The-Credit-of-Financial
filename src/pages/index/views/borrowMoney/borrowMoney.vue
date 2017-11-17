@@ -7,38 +7,37 @@
         </div>
         <!--banner1 -->
         <!-- 审核中 -->
-        <div class="inner flexBox" v-show="borrowState==1100">
+        <div class="inner inner_f flexBox" v-show="borrowState==1100">
+          <!-- <div class="inner inner_f flexBox"> -->
             <div class="iconW"></div>
             <p class="f32 g6 l1 pt80 pb40">信用额度计算中……</p>
             <p class="f28 g9 l1">预计1-2个工作日审核完毕</p>
         </div>
         <!-- 驳回 -->
-         <div class="inner flexBox" v-show="borrowState==52000">
+         <div class="inner inner_f flexBox" v-show="borrowState==52000">
             <div class="iconW reject"></div>
             <p class="f32 g6 l1 pt80 pb40 fw300">您提交的资料有误,请及时修改!</p>
             <router-link to="identityAuthen" class="btn mt40 modefiyBtn">修改资料</router-link>
          </div>
         <!-- 拒贷 -->
-        <!-- <div class="inner flexBox" v-show="borrowState==53500"> -->
-        <div class="inner flexBox">
+        <div class="inner inner_f flexBox" v-show="borrowState==53500">
             <div class="iconW refuse"></div>
             <p class="f32 g6 l1 pt80 fw300">您的申请未通过!</p>
             <p class="f28 g9 l1 pt60">业绩更上一层楼，才能提升您的信用评分</p>
             <p class="f28 g3 pt20">请30天后再来申请吧！</p>
         </div>
         <!-- 通过 -->
-        <div class="inner flexBox f26 pass rel" v-show="status3">
-        <!-- <div class="inner flexBox f26 pass rel" > -->
+        <div class="inner inner_1 flexBox f26 pass rel" v-show="status3">
             <h3 class="passT">可借金额（元）</h3>
             <div class="lineA rel"></div>
             <div class="f70 g6 l1 mt80"><i class="f40">¥</i> {{money}}</div>
-            <div class="g9 l1 pt22">期限{{time}}个月</div>
+            <div class="g9 l1">期限{{time}}个月</div>
             <div class="lineB"></div>
             <div class="f24 l1 g3">有效期至：{{dataDue|dateFilter}}</div>
             <div class="f24 g9 l1 pt10">请在有效期内确认借款</div>
             <router-link :to="'loanContract?apcId='+applicationId+'&isShow=1'" class="btn w580 mt74 mb30">确认借款</router-link>
             <div class="pb30 pt30">
-                <span class="g6 f28">点击确认借款表示您同意签订<router-link :to="'loanContract?apcId='+applicationId+'&isShow=1'" class="blue">《合同及相关协议》</router-link></span>
+                <span class="g6 f28 fw300">点击确认借款表示您同意签订<router-link :to="'loanContract?apcId='+applicationId+'&isShow=1'" class="blue">《合同及相关协议》</router-link></span>
             </div>
             <svg width="100%" height="28" style="transform:rotate(180deg)" class="lineC abs">
                 <line x1="0" x2="1380" y1="0" y2="0"
@@ -46,7 +45,8 @@
             </svg>
         </div>
         <!-- 借款成功,正在汇款，目前无此状态-->
-        <div class="inner flexBox f26 pass rel" v-show="borrowState==53000">
+        <!-- <div class="inner inner_1 flexBox f26 pass rel" v-show="borrowState==53000"> -->
+        <div class="inner inner_1 flexBox f26 pass rel" >
             <h3 class="passT">已借金额（元）</h3>
             <div class="lineA rel"></div>
             <div class="f70 g6 l1 mt80"><i class="f40">¥</i>{{money}}</div>
@@ -60,9 +60,7 @@
             </svg>
         </div>
         <!-- 借款成功,最近一期还款计划 -->
-        <div class="inner flexBox f26 pass rel" v-show="borrowState==35000||borrowState==40000">
-        <!-- <div class="inner flexBox f26 pass rel" > -->
-
+        <div class="inner inner_1 flexBox f26 pass rel" v-show="borrowState==35000||borrowState==40000">
             <h3 class="passT">已借金额（元）</h3>
             <div class="lineA rel"></div>
             <div class="f70 g6 l1 mt80"><i class="f40">¥</i> {{money}}</div>
@@ -82,7 +80,7 @@
     @import '../static/css/common.css';
     .f26 {
       height: 100%;
-      background-color: white;
+      // background-color: white;
       // position: relative;
     }
     .banner {
@@ -114,7 +112,13 @@
         height: 780px;
         background: #FFFFFF;
     }
-
+    .inner_f {
+      height: 100%;
+    }
+    .inner_1 {
+      margin: 0 30px;
+      padding-top: 0;
+    }
     .pt33 {
         padding-top: 33px;
     }
@@ -152,9 +156,10 @@
     }
 
     .pass {
-        padding-top: 0;
+        margin-top: 455px;
         box-shadow: none;
         height: auto;
+        background-color: white;
     }
 
     .passT {
@@ -179,6 +184,7 @@
     }
       .btn {
         margin: 0 55px;
+        box-shadow: 0px 22px 23px 0px rgba(250, 85, 89, 0.18);
       }
 
     .lineA:after {
