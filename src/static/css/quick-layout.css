@@ -1198,7 +1198,9 @@ a {
 .box-sizing {
   box-sizing: border-box;
 }
-
+.box-shadow {
+  box-shadow: 0px 22px 23px 0px rgba(250, 85, 89, 0.18);
+}
 .arrow_r {
   background: url("../images/arrow_r.png") right center no-repeat;
   background-size: 15px 30px;

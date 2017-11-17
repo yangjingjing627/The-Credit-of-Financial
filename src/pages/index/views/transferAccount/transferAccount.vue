@@ -6,26 +6,26 @@
                 <div class="flexA">
                     <h5 class="title-a f30 g3">转入钱包</h5>
                     <div class="con-a f30 w480">
-                        <input type="text" class="input" placeholder="" v-model="walletAddress"/>
+                        <input type="text" class="input tr qrcode_icon" placeholder="" value="hbdhsbdshds" v-model="walletAddress"/>
                     </div>
                 </div>
                 <div class="flexA">
                     <h5 class="title-a f30 g3">转入金额</h5>
                     <div class="con-a f30 w480">
-                        <input type="text" class="input" placeholder="" v-model="amount"/>
+                        <input type="text" class="input tr" placeholder="" v-model="amount"/>
                     </div>
                 </div>
                 <div class="flexA">
                     <h5 class="title-a f30 g3">备注</h5>
                     <div class="con-a f30 w480">
-                        <input type="text" class="input" placeholder="" v-model="log"/>
+                        <input type="text" class="input tr" placeholder="" v-model="log"/>
                     </div>
                 </div>
             </div>
 
             <div class="errormsg pt40 tc">{{errormsg}}</div>
-            <div class="mt260 content">
-                <div class="btn" @click="nextStep2">下一步</div>
+            <div class="mt100 content">
+                <div class="btn box-shadow" @click="nextStep2">下一步</div>
             </div>
         </div>
 
@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div class="content">
-                    <div class="btn" @click="nextStep3">确认</div>
+                    <div class="btn box-shadow" @click="nextStep3">确认</div>
                 </div>
             </div>
         </div>
@@ -129,6 +129,9 @@
     </div>
 </template>
 <style lang="sass" scoped>
+    .input {
+      width: 100%;
+    }
     .pop {
         width: 100%;
         height: 100%;
@@ -294,5 +297,12 @@
         text-indent: -1000px;
     }
     .forget{margin:0 0 25px 530px;}
+    .qrcode_icon {
+        padding-right: 40px;
+        box-sizing: border-box;
+        background: url(./images/icon_sys.png) no-repeat right center;
+        background-size: 36px 27px;
+    }
+
 </style>
 <script src="./transferAccount.js"></script>

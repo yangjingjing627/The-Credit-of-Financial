@@ -548,7 +548,7 @@ const routeConfig = [
         meta: {
             back: true,
             midText: '转账',
-            rightIcon: 'icon-tips-ta',
+            // rightIcon: 'icon-tips-ta',
             leftPath:'home'
         }
     },
