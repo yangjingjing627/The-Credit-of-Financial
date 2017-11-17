@@ -89,62 +89,64 @@
         </div>
 
         <!--计算器键盘  -->
-        <div class="calculatorPop" v-show="calculator==true">
+        <!-- <div class="calculatorPop" v-show="calculator==true"> -->
+        <div class="calculatorPop">
+
             <div class="calculator J_calculator">
                 <span class="closePop" @click="calculatorClose"></span>
-                <h3>计算收益</h3>
+                <h3 class="f32 g3 dialog-title">计算收益</h3>
                 <div class="operateArea">
                     <div class="simulateInput">
                         <input class="input" name="amount" v-model="amount" type="text" readonly="true"/>
                         <span class="subBtn" @click="subMoney"></span>
                         <span class="addBtn" @click="addMoney"></span>
                     </div>
-                    <div class="result f28">预期收益：<span class="red">￥{{count}}</span></div>
-                    <!-- <div class="counterBtn">
+                    <div class="result f28">预期收益：<span class="red">{{count}}(QBM)</span></div>
+                    <div class="counterBtn">
                         <a href="javascript:;" class="btn">计算</a>
-                    </div> -->
+                    </div>
                 </div>
                 <ul class="keyboard fix">
                     <li class="keyItem" @click="numStack(1)">
-                        <p>1</p>
+                        <p class="f56 g3">1</p>
                     </li>
                     <li class="keyItem colCenter" @click="numStack(2)">
-                        <p>2</p>
+                        <p class="f56 g3">2</p>
                         <p class="enLetter">ABC</p>
                     </li>
                     <li class="keyItem" @click="numStack(3)">
-                        <p>3</p>
+                        <p class="f56 g3">3</p>
                         <p class="enLetter">DEF</p>
                     </li>
                     <li class="keyItem" @click="numStack(4)">
-                        <p>4</p>
+                        <p class="f56 g3">4</p>
                         <p class="enLetter">GHI</p>
                     </li>
                     <li class="keyItem colCenter" @click="numStack(5)">
-                        <p>5</p>
+                        <p class="f56 g3">5</p>
                         <p class="enLetter">JKL</p>
                     </li>
                     <li class="keyItem" @click="numStack(6)">
-                        <p>6</p>
+                        <p class="f56 g3">6</p>
                         <p class="enLetter">MNO</p>
                     </li>
                     <li class="keyItem" @click="numStack(7)">
-                        <p>7</p>
+                        <p class="f56 g3">7</p>
                         <p class="enLetter">PQRS</p>
                     </li>
                     <li class="keyItem colCenter" @click="numStack(8)">
-                        <p>8</p>
+                        <p class="f56 g3">8</p>
                         <p class="enLetter">TUV</p>
                     </li>
                     <li class="keyItem" @click="numStack(9)">
-                        <p>9</p>
+                        <p class="f56 g3">9</p>
                         <p class="enLetter">WXYZ</p>
                     </li>
                     <li class="keyItem grayBg" @click="numStack('.')">
                         <p class="keyDot">.</p>
                     </li>
                     <li class="keyItem colCenter" @click="numStack(0)">
-                        <p class="keyZero">0</p>
+                        <p class="keyZero f56 g3">0</p>
                     </li>
                     <li class="keyItem grayBg" @click="deleteNum">
                         <span class="keydel"></span>
@@ -164,7 +166,9 @@
         font-size: 36px;
         color: #fff
     }
-
+    .f56 {
+      font-size: 56px;
+    }
     .arrowsL {
         left: 30px;
         width: 30px;
@@ -372,7 +376,7 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 730px;
+        height: 810px;
         text-align: center;
         background-color: #fff;
         /* transition:all 0.4s;
@@ -388,11 +392,11 @@
 
     .calculator .closePop {
         position: absolute;
-        right: 30px;
+        left: 0px;
         top: 0px;
         display: block;
-        width: 36px;
-        height: 36px;
+        width: 28px;
+        height: 28px;
         padding: 40px;
     }
 
@@ -429,8 +433,8 @@
         padding: 0 80px;
         height: 85px;
         border: 1px solid #ddd;
-        border-radius: 6px;
-        -webkit-border-radius: 6px;
+        height: 98px;
+        border-radius: 50px;
     }
 
     .calculator .simulateInput .input {
@@ -439,16 +443,16 @@
 
     .calculator .simulateInput .subBtn, .calculator .simulateInput .addBtn {
         position: absolute;
-        top: 1px;
-        width: 80px;
-        height: 85px;
+        width: 84px;
+        height: 84px;
+        background: #F9F9F9;
+        border-radius: 50%;
+        cursor: pointer;
     }
 
     .calculator .simulateInput .subBtn {
-        position: absolute;
-        left: 0;
-        top: 0;
-        border-right: 1px solid #ddd;
+        top: 5px;
+        left: 5px;
     }
 
     .calculator .simulateInput .subBtn:before {
@@ -465,10 +469,8 @@
     }
 
     .calculator .simulateInput .addBtn {
-        position: absolute;
-        right: 0;
-        top: 0;
-        border-left: 1px solid #ddd;
+      right: 5px;
+      top: 5px;
     }
 
     .addBtn:before, .addBtn:after {
@@ -520,7 +522,7 @@
         padding-top: 16px;
         height: 96px;
         width: 33%;
-        border-bottom: 1px solid #8c8c8c;
+        border-bottom: 1px solid #eee;
         color: #000;
         line-height: 36px;
         font-size: 40px;
@@ -530,7 +532,7 @@
         width: 34%;
         border-width: 0 1px 1px;
         border-style: solid;
-        border-color: #8c8c8c;
+        border-color: #eee;
     }
 
     [data-dpr="1"] .keyboard .colCenter {
@@ -538,12 +540,12 @@
     }
 
     .keyboard .keyItem .enLetter {
-        color: #030303;
-        font-size: 22px;
+        color: #666;
+        font-size: 20px;
     }
 
     .keyboard .grayBg {
-        background-color: #d2d5da;
+        background-color: #F9F9F9;
     }
 
     .keyboard .keyItem:active {
@@ -556,9 +558,9 @@
 
     .keyboard .keydel {
         display: inline-block;
-        margin-top: 14px;
-        width: 46px;
-        height: 34px;
+        margin-top: 10px;
+        width: 77px;
+        height: 50px;
         background: url(./images/icon_keydel.png) no-repeat;
         background-size: 100% 100%;
     }
@@ -574,6 +576,12 @@
         border-radius: 8px;
         margin: 30px auto;
         text-indent: -1000px;
+    }
+    .btn {
+      box-shadow: 0px 22px 23px 0px rgba(250, 85, 89, 0.18);
+    }
+    .dialog-title {
+      border-bottom: 1px solid #eee;
     }
 </style>
 <script src="./projectDetail.js"></script>

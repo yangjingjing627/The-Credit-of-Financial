@@ -141,7 +141,6 @@
 
     .amountInfo .inputMoney .subBtn, .amountInfo .inputMoney .addBtn {
         position: absolute;
-        border: 1px solid #ddd;
         width: 84px;
         height: 84px;
         background: #F9F9F9;
