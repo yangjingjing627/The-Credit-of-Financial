@@ -1,47 +1,49 @@
 <template>
     <div>
         <div class="detailMain rel">
+          <div class="detail_header">
             <div class="header abs">
-                <router-link to="project" class="abs arrowsL"></router-link>
-                {{list.title}}
+              <router-link to="project" class="abs arrowsL"></router-link>
+              {{list.title}}
             </div>
             <section class="bidDetail">
-                <p class="aprTxt f30 l1 pb20">预期年化</p>
-                <p class="aprPre l1"><span class="num l1">{{list.rate}}</span>%</p>
-                <ul class="bidLimit mt40">
-                    <li>
-                        <p class="title l1">起投金额(元)</p>
-                        <p class="number f40 l1"><span v-text="list.startInvestAmount"></span></p></li>
-                    <li>
-                        <p class="title l1">项目期限(天)</p>
-                        <p class="number f40 l1" v-text="list.period"></p>
-                    </li>
+              <p class="aprTxt f30 l1 pb20">预期年化</p>
+              <p class="aprPre l1"><span class="num l1">{{list.rate}}</span>%</p>
+              <ul class="bidLimit mt40 mb40">
+                <li>
+                  <p class="title l1">起投金额(元)</p>
+                  <p class="number f40 l1"><span v-text="list.startInvestAmount"></span></p></li>
+                  <li>
+                    <p class="title l1">项目期限(天)</p>
+                    <p class="number f40 l1" v-text="list.period"></p>
+                  </li>
                 </ul>
-                <!-- 进度条 -->
-                <div class="bidProgress">
-                    <div class="progressBar">
-                        <p class="bar" :style="'width:' + amountProgressbar + '%;'"></p>
-                    </div>
-                    <div class="progressTxt l1">
-                        <span class="proTxt">进度<span v-text="amountProgress"></span>% 项目总额</span> ￥{{list.amount |
-                        toThousands}}
-                    </div>
+              </section>
+          </div>
+            <!-- 进度条 -->
+            <div class="bidProgress">
+              <div class="progressBar">
+                <p class="bar" :style="'width:' + amountProgressbar + '%;'"></p>
+              </div>
+              <div class="progressTxt l1 tc">
+                <span>进度<span v-text="amountProgress"></span>% 项目总额</span> {{list.amount |
+                  toThousands}}(QBM)
                 </div>
-            </section>
-            <div class="bidRemaining bg-white"><span class="remainMoney r">￥{{qbm | toThousands}}</span>剩余可投金额：</div>
+              </div>
+            <div class="bidRemaining bg-white f28 g9"><span class="remainMoney r g3 f28">￥{{qbm | toThousands}}</span>剩余可投金额：</div>
             <div class="bidProcess mt10">
                 <ul class="processInner">
                     <li>
                         <span class="process_icon begin_icon"></span>
-                        <p>开始投资</p>
+                        <p class="f28 g6">开始投资</p>
                     </li>
                     <li>
                         <span class="process_icon benefit_icon"></span>
-                        <p>满标次日计息</p>
+                        <p  class="f28 g6">满标次日计息</p>
                     </li>
                     <li>
                         <span class="process_icon exit_icon"></span>
-                        <p>到期退出</p>
+                        <p  class="f28 g6">到期退出</p>
                     </li>
                 </ul>
             </div>
@@ -50,8 +52,8 @@
             <div class="proInfos mt10">
                 <div class="itemLink fix bbe pb30">
                     <div class="l">
-                        <p class="g6">投资10000元，到期预计可获得：</p>
-                        <div class="g6 f40 mt10">￥{{countDef}}</div>
+                        <p class="g6 f28">投资10000元，到期预计可获得：</p>
+                        <div class="g3 f60 mt10">{{countDef}}(QBM)</div>
                     </div>
                     <div class="r">
                         <span class="icon_calculator" @click="calculatorBtn"></span>
@@ -59,16 +61,16 @@
                 </div>
                 <div class="itemLink fix pt25 pb25">
                     <div class="l">
-                        <span class="g9">计息方式：</span>
+                        <span class="g9 f28">计息方式：</span>
                     </div>
                     <div class="r">
-                        <span class="g9">到期一次性还本付息</span>
+                        <span class="g9 f28">到期一次性还本付息</span>
                     </div>
                 </div>
             </div>
 
             <!--更多详情  -->
-            <div class="moreDetail tc">
+            <div class="moreDetail pl20 pr20">
                 <router-link :to="{ path: 'moreDetail', query: { id: list.id , active: 0}}" class="g9"><i
                         class="icon_more rel"></i>点击，可查看更多详情
                 </router-link>
@@ -76,11 +78,11 @@
 
             <!--购买  -->
             <div class="bg-white p20 bte">
-                <router-link :to="'buyNow?id=' + list.id" class="btn" v-show="list.status==10">
+              <p class="proTime pb20 tc f28 g6" v-show="list.status==10">剩余筹标时间：
+                <c-countdown :startTime="+new Date()" :endTime="deadTime" :second="true"></c-countdown>
+              </p>
+                <router-link :to="'buyNow?id=' + list.id" class="btn mb20" v-show="list.status==10">
                     <span class="f36">立即购买</span>
-                    <p class="proTime f22">剩余筹标时间：
-                        <c-countdown :startTime="+new Date()" :endTime="deadTime" :second="true"></c-countdown>
-                    </p>
                 </router-link>
                 <div class="btn disabled" v-show="list.status==20">已满额</div>
                 <div class="btn disabled" v-show="list.status==60">已结清</div>
@@ -155,6 +157,10 @@
     </div>
 </template>
 <style lang="sass" scoped>
+  .detail_header {
+    background: url(./images/borrowBanner.png) no-repeat center;
+    background-size: 100% 100%;
+  }
     .header {
         top: 0;
         width: 100%;
@@ -179,9 +185,9 @@
         padding: 130px 0 30px;
         text-align: center;
         color: #fff;
-        background-image: linear-gradient(to bottom, #fa5357, #fb3d42);
-        background-image: -webkit-linear-gradient(to bottom, #fa5357, #fb3d42);
-        background-image: -ms-linear-gradient(to bottom, #fa5357, #fb3d42);
+        // background-image: linear-gradient(to bottom, #fa5357, #fb3d42);
+        // background-image: -webkit-linear-gradient(to bottom, #fa5357, #fb3d42);
+        // background-image: -ms-linear-gradient(to bottom, #fa5357, #fb3d42);
     }
 
     .bidDetail .aprPre {
@@ -220,14 +226,17 @@
     }
 
     .bidProgress {
-        margin: 34px 48px 0 48px;
+        // margin: 34px 48px 0 48px;
+        margin: 20px 20px 0;
+        padding: 36px 33px 15px;
+        background-color: #fff;
     }
 
     .bidProgress .progressBar {
         position: relative;
         width: 100%;
         height: 8px;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: #EEEEEE;
         border-radius: 8px;
         -webkit-border-radius: 8px;
     }
@@ -237,7 +246,7 @@
         top: 0;
         left: 0;
         height: 100%;
-        background-color: #fff;
+        background-color: #FF5C5C;
         border-radius: 8px;
         -webkit-border-radius: 8px;
         transition: width 0.5s linear 0.1s;
@@ -246,17 +255,15 @@
 
     .bidProgress .progressTxt {
         margin-top: 32px;
-    }
-
-    .bidProgress .progressTxt .proTxt {
-        color: rgba(255, 255, 255, 0.6);
+        color: #333;
     }
 
     .bidRemaining {
-        padding: 0 30px;
-        height: 80px;
+        padding: 0 40px;
+        height: 110px;
         color: #999;
-        line-height: 80px;
+        line-height: 110px;
+        margin: 20px 20px 0;
     }
 
     .bidRemaining .remainMoney {
@@ -266,6 +273,7 @@
     .bidProcess {
         padding: 70px 0 38px 0;
         background-color: #fff;
+        margin: 20px 20px 0;
     }
 
     .processInner {
@@ -299,44 +307,56 @@
     /*开始投资-进入收益期-到期退出 图标  */
     .process_icon {
         display: inline-block;
-        width: 46px;
-        height: 55px;
-        background-image: url("./images/ico_probid.png");
+        width: 63px;
+        height: 63px;
+        background-color: #F9F9F9;
         background-repeat: no-repeat;
-        background-size: 46px 225px;
+        background-size: 27px 32px;
+        background-position: center center;
+        border-radius: 50%;
     }
 
     .process_icon.begin_icon {
-        background-position: 0 0;
+      background-image: url("./images/ico_probid1.png");
     }
 
     .process_icon.benefit_icon {
-        background-position: 0 -86px;
+      background-image: url("./images/ico_probid2.png");
     }
 
     .process_icon.exit_icon {
-        background-position: 0 -170px;
+      background-image: url("./images/ico_probid3.png");
     }
 
     /*投资 计算器  */
     .proInfos {
         background: #fff;
         padding: 40px 32px 0 40px;
+        margin: 20px;
     }
 
     .proInfos .icon_calculator {
         width: 80px;
-        height: 77px;
+        height: 117px;
         background: url(./images/icon_calculator.png) no-repeat;
+        background-position: center 40px;
         background-size: 80px 77px;
         display: block;
     }
 
     /*更多详情  */
+    .moreDetail {
+      background-color: #FFEABA;
+    }
     .moreDetail a {
+      background: url(./images/arrow_r.png) no-repeat right center;
+      background-size: 20px 32px;
         display: block;
-        padding: 40px 0 32px;
-        line-height: 1;
+        height: 86px;
+        line-height: 46px;
+        padding: 20px 0 32px;
+        color: #A64F18;
+        font-size: 28px;
     }
 
     .moreDetail .icon_more {
