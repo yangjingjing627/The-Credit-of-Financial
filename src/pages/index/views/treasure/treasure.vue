@@ -18,24 +18,15 @@
                     <div class="pro-title">
                         <ul class="fix">
                             <li>
-                                <span class="icon icon_height"></span>
                                 <router-link to="moreDetail" class="g6">
-                                    <span>区块交易：</span><span class="txt">0</span>
+                                  <span class="g2 f28">个人精选借贷 |</span><span class="g2 f24">&nbsp;好贷宝</span>
+                                  <span class="pro-mark r">发售中</span>
                                 </router-link>
                             </li>
-                            <li class="fix">
-                                <span class="icon icon_source"></span>
-                                <span>来源：</span><span class="txt">好贷宝</span>
-                                <span class="pro-mark r">发售中</span>
+                            <li class="f24 g9">
+                                <span>入块高度：</span><span>9527/</span><span>入块时间：</span><span>2017-08-19</span>
                             </li>
-                            <li>
-                                <span class="icon icon_date"></span>
-                                <span>入块时间：</span><span>2017-08-19</span>
-                            </li>
-                            <li>
-                                <span class="icon icon_title"></span>
-                                <span>标题：</span><span>个人精选借贷</span>
-                            </li>
+
                         </ul>
                     </div>
                     <div class="pro-detail">
@@ -195,6 +186,19 @@
     }
     .pro-box{
         margin-left:40px;
+    }
+    .prolist .pro-title li {
+      width: 100%;
+    }
+    .prolist .pro-title li span {
+      font-weight: 300;
+    }
+    .g2 {
+      color: #222;
+    }
+    .prolist .pro-title {
+      padding:20px 0px;
+      margin:0px 28px;
     }
 </style>
 <script src="./treasure.js"></script>
