@@ -2,33 +2,41 @@
     <div class="bg">
         <ul>
             <li class="l"  v-bind:class="{ registing: step1 }">
-                <div class="step1_icon step_icon" v-if="sucIcon1">1</div>
-                <div class="step1_icon suc" v-else></div>
-                <div class="f24">填写手机号</div>
+                <div class="step1_icon step_icon bg-red" v-if="sucIcon1 && !sucIcon2 && !sucIcon3">1</div>
+                <div class="step1_icon suc" v-else-if="!sucIcon1 && (sucIcon2 || sucIcon3)"></div>
+                <div class="step1_icon step_icon" v-else>1</div>
+                <div class="f24 red" v-if="sucIcon1 && !sucIcon2 && !sucIcon3">填写手机号</div>
+                <div class="f24" v-else>填写手机号</div>
             </li>
+
             <li class="step2W" v-bind:class="{ registing: step2 }">
-                <div class="step2_icon step_icon" v-if="sucIcon2">2</div>
-                <div class="step2_icon suc" v-else></div>
-                <div class="f24">获取验证码</div>
+                <div class="step2_icon step_icon bg-red" v-if="!sucIcon1 && sucIcon2 && !sucIcon3">2</div>
+                <div class="step2_icon suc" v-else-if="!sucIcon2 && !sucIcon1 && sucIcon3"></div>
+                <div class="step2_icon step_icon" v-else>2</div>
+                <div class="f24 red" v-if="!sucIcon1 && sucIcon2 && !sucIcon3">设置登录密码</div>
+                <div class="f24" v-else>设置登录密码</div>
             </li>
+
             <li class="r" v-bind:class="{ registing: step3 }">
-                <div class="step3_icon step_icon" v-if="sucIcon3">3</div>
-                <div class="step3_icon suc" v-else></div>
-                <div class="f24">设置登录密码</div>
+                <div class="step3_icon step_icon bg-red" v-if="!sucIcon1 && !sucIcon2 && sucIcon3">3</div>
+                <div class="step3_icon step_icon" v-else>3</div>
+                <div class="f24 red" v-if="!sucIcon1 && !sucIcon2 && sucIcon3">获取验证码</div>
+                <div class="f24" v-else>获取验证码</div>
             </li>
+
         </ul>
         <div v-show="step1">
             <div class="step">
                 <input type="tel" class="tel inputCode" maxlength="11" v-model="tel" @keyup="watchTel"
                        @focus="errorMsg=''">
-                <span class="delate" @click="tel=''"></span>
+                <span class="delete" @click="tel=''"></span>
             </div>
             <p class="errormsg">&nbsp{{errorMsg}}</p>
             <div class="content">
                 <div class="btn" :class="tel?'':'opacity'" @click="submit1">下一步</div>
             </div>
         </div>
-        <div v-show="step2">
+        <div v-show="step3">
             <div class="step">
                 <input type="text" maxlength="6" placeholder="请输入6位验证码" class="authCode inputCode" v-model="authCode"
                        @focus="errorMsg=''">
@@ -40,7 +48,7 @@
                 <div class="btn" :class="authCode?'':'opacity'" @click="submit2">下一步</div>
             </div>
         </div>
-        <div v-show="step3">
+        <div v-show="step2">
             <div class="step">
                 <input type="text" class="logPsw inputCode" maxlength="16" placeholder="设置登录密码" v-model="logPsw"
                        :class="toggle?'':'security'" @keyup="watchPsw">
@@ -83,10 +91,10 @@
     .step_icon {
         border: $border;
         border-radius: 50%;
-        width: 33px;
-        height: 33px;
+        width: 44px;
+        height: 44px;
         text-align: center;
-        line-height: 33px;
+        line-height: 44px;
         font-size: 24px;
         color: #868896;
         font-weight: 300;
@@ -101,32 +109,32 @@
     .step1_icon:after, .step2_icon:after {
         position: absolute;
         top: 16px;
-        left: 42px;
+        left: 52px;
         content: "";
-        width: 120px;
+        width: 110px;
         height: 0;
-        border-top: 3px dotted #a0a0a0;
+        border-top: 3px dotted #979797;
         opacity: 0.6;
     }
 
     .step2_icon {
         margin-left: 50px;
-        position: relative
+        position: relative;
     }
 
     div.step2_icon:after {
-        width: 130px;
+        width: 110px;
     }
 
     .step3_icon {
-        margin-left: 54px;
+        margin-left: 38px;
     }
 
     .f24 {
         padding: 36px 0 127px;
         line-height: 1;
         font-size: 24px;
-        color: $first-header;
+        // color: $first-header;
     }
 
     .step {
@@ -145,11 +153,11 @@
         line-height: 1;
     }
 
-    .delate {
+    .delete {
         float: right;
         margin: 6px 10px 0 0;
-        width: 31px;
-        height: 31px;
+        width: 32px;
+        height: 32px;
         background: url("./images/delate.png") center no-repeat;
         background-size: contain;
     }
@@ -215,19 +223,25 @@
 
     .suc {
         border: none;
-        width: 34px;
-        height: 34px;
-        background: url("./images/suc.png") center no-repeat;
-        background-size: 100%;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: #FA5559 url("./images/suc.png") center no-repeat;
+        background-size: 24px 23px;
     }
     .registing {
       .step_icon {
         background-color: $primary;
         color: #fff;
       }
-      .f24 {
-        color: $primary;
-      }
+    }
+    .bg-red {
+      color: #fff;
+      border: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #FA5559;
     }
 </style>
 <script src="./register.js"></script>

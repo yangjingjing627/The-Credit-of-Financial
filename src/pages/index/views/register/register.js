@@ -17,8 +17,8 @@ export default {
             step3: false,
             errorMsg: '',
             sucIcon1: true,
-            sucIcon2: true,
-            sucIcon3: true,
+            sucIcon2: false,
+            sucIcon3: false,
             code: false,
             time: 60
         }
@@ -79,12 +79,13 @@ export default {
                         duration: 2000
                     })
                 }
+                this.sucIcon2 = true
             })
                 .catch((res) => {
                     console.log(res)
                 })
         },
-        submit2(){
+        submit3(){
             if (this.authCode) {
                 if (!/^\d{6}$/.test(this.authCode)) {
                     this.errorMsg = "验证码格式不正确"
@@ -93,12 +94,16 @@ export default {
                     this.step2 = false;
                     this.step3 = true;
                     this.sucIcon2 = false
+                    this.submit23()
                 }
             } else {
                 return false;
             }
         },
-        submit3(){
+        submit2(){
+
+        },
+        submit23(){
             const self = this;
             this.$http({
                 method: 'post',
