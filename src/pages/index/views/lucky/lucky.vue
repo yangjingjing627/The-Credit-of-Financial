@@ -3,12 +3,15 @@
         <div class="lucky-banner"></div>
         <div v-if="goLucky" @click="viewUserInfo">
             <div class="lucky-s lucky-money">
-                <h2></h2>
-                <p>新签约IPOS商户，且经营半年以上</p>
+              <h2>招小财</h2>
+                <p>新签约IPOS商户</p>
+                <p>经营≥半年以上</p>
             </div>
             <div class="lucky-b lucky-money">
-                <h2></h2>
-                <p>持续经营1年以上，且近2个月内ipos交易笔数不低于200笔，交易流水不低于5万元</p>
+              <h2>招大财</h2>
+                <p>持续经营1年以上</p>
+                <p>近2个月内ipos交易笔数≥200笔</p>
+                <p>交易流水≥5万元</p>
             </div>
         </div>
         <div v-else class="go-to-lucky">
@@ -152,47 +155,49 @@
   .lucky {
     .lucky-banner {
       width: 100%;
-      height: 324px;
-       background:url(../borrowMoney/images/borrowBanner.png) no-repeat;
+      height: 620px;
+       background:url(./images/bar.png) no-repeat;
        background-size: 100% 100%;
     }
     .lucky-money {
-      width: 690px;
-      height: 398px;
-      margin: 0 auto;
+      width: 710px;
+      height: 260px;
+      margin: 0 auto 20px;
       background-color: #fff;
-      box-shadow: 0px 0px 30px #ddd;
+      // box-shadow: 0px 0px 30px #ddd;
       border-radius: 8px;
+
       h2 {
-        width: 297px;
-        height: 289px;
-        margin: 0 auto;
+        padding-top: 30px;
+        padding-left: 100px;
+        padding-bottom: 10px;
+        color: #fff;
+        line-height: 40px;
+        text-align: left;
+        font-size: 42px;
+        text-shadow: 0px 3px 13px #0052F2;
       }
+
       p {
-        width: 539px;
-        margin: 0 auto;
-        color: #666666;
-        font-size: 26px;
-        line-height: 37px;
-        text-align: center;
+        padding-left: 100px;
+        color: #fff;
+        font-size: 28px;
+        line-height: 40px;
+        text-align: left;
+        font-weight: 300;
+        text-shadow: 0px 2px 4px #3793F5;
       }
     }
     .lucky-s {
-      margin-top: -104px;
-      margin-bottom: 20px;
-      h2{
-        background: url(./images/lucky-s.png) no-repeat;
-        background-size: 100% 100%;
-      }
+      background: url(./images/lucky-s.png) no-repeat center;
+      background-size: 100% 100%;
       p {
         margin-top: 10px;
       }
     }
     .lucky-b {
-      h2 {
-        background: url(./images/lucky-b.png) no-repeat;
-        background-size: 100% 100%;
-      }
+      background: url(./images/lucky-b.png) no-repeat center;
+      background-size: 100% 100%;
     }
     .go-to-lucky {
       width: 690px;
