@@ -1,8 +1,6 @@
 <template>
     <div>
-        <!-- <div class="bg-gradient h330"> -->
         <div class="bg-white">
-            <!-- <div class="decoration"></div> -->
             <div class="smile"></div>
             <p class="f40 g3">{{mobilePhone | formatTel}}</p>
         </div>
@@ -11,8 +9,6 @@
                 <li>
                     <span class="iconW"></span>
                     <span class="f32 g3">实名认证</span>
-                    <!-- <i class="circleL"></i> -->
-                    <!-- <i></i> -->
                     <span class="r arrows"></span>
                 </li>
             </router-link>
@@ -20,8 +16,6 @@
                 <li>
                     <span class="iconW iconW2"></span>
                     <span class="f32 g3">修改登录密码</span>
-                    <!-- <i class="circleL"></i> -->
-                    <!-- <i></i> -->
                     <span class="r arrows"></span>
                 </li>
             </router-link>
@@ -29,8 +23,6 @@
                 <li>
                     <span class="iconW iconW2"></span>
                     <span class="f32 g3">{{tradeMsg}}</span>
-                    <!-- <i class="circleL"></i> -->
-                    <!-- <i></i> -->
                     <span class="r arrows"></span>
                 </li>
             </router-link>
@@ -81,10 +73,8 @@
     }
 
     ul {
-        // margin: 21px auto 0;
         box-shadow: 0px 2px 16px 0px rgba(111, 31, 33, 0.1);
         border-radius: 6px;
-        // width: 690px;
         padding: 0 40px;
         background: #fff;
     }
@@ -115,30 +105,12 @@
     .iconW2 {
       background: url("./images/psw_icon.png") left center no-repeat;
       background-size: 24px 30px;
-        // background-position: 0 -40px;
-        // vertical-align: -8px;
     }
 
     .iconW3 {
       background: url("./images/feedback.png") left center no-repeat;
       background-size: 24px 26px;
-        // background-position: 0 -100px;
-        // vertical-align: -6px;
     }
-
-    // i {
-    //     position: absolute;
-    //     right: -32px;
-    //     bottom: -10px;
-    //     width: 20px;
-    //     height: 20px;
-    //     border-radius: 50%;
-    //     background: #f9f9f9;
-    // }
-
-    // .circleL {
-    //     left: -38px;
-    // }
 
     .r {
         margin-top: 20px;
