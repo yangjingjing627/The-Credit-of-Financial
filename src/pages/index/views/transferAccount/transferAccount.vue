@@ -61,9 +61,7 @@
         </div>
 
         <!--输入银行数字安全密码  -->
-        <!-- <div class="pop" v-show="step3"> -->
-          <div class="pop">
-
+        <div class="pop" v-show="step3">
             <div class="bankPwd">
                 <div class="title tc bbe pt20">
                     <h2 class="f32 g3">输入银行数字安全密码</h2>

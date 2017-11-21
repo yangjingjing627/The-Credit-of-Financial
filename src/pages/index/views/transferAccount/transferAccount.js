@@ -12,8 +12,8 @@ export default {
 		this.walletAddress = queryString('walletAddress');
 		if(queryString('amount')){
 			this.amount = queryString('amount');
-		}	
-		
+		}
+
 		var self = this;
 		bridgeRegisterHandler({
 			method: "qrCodeResult",  // 当前页面扫码回调
@@ -26,7 +26,7 @@ export default {
 		})
 	},
 	mounted() {
-		
+
 	},
 	data() {
 		return {
@@ -49,7 +49,7 @@ export default {
 	computed: {
 		...mapGetters({
 			gToken: 'token',
-			rightClick: 'rightClick'			
+			rightClick: 'rightClick'
 		})
 	},
 	destroyed(){ // 实例销毁之后调用

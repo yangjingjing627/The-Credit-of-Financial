@@ -12,7 +12,7 @@
                       <div class="tl f28 g9">马上登录开启财富管理</div>
                     </div>
                 </div>
-                <div class="flexBox bg-gradient pt163" :class="{finished:authStatus==50}" v-else>
+                <div class="flexBox bg-gradient pt163 pb20" :class="{finished:authStatus==50}" v-else>
                     <div class="decoration"></div>
                     <div class="abs pl30 pr20">
                         <router-link to="/userCenter" class="iconW my"></router-link>
