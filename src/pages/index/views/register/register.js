@@ -101,7 +101,12 @@ export default {
             }
         },
         submit2(){
-
+          this.sucIcon1 = false;
+          this.sucIcon2 = false;
+          this.sucIcon3 = true;
+          this.step1 = false;
+          this.step2 = false;
+          this.step3 = true;
         },
         submit23(){
             const self = this;

@@ -36,18 +36,7 @@
                 <div class="btn" :class="tel?'':'opacity'" @click="submit1">下一步</div>
             </div>
         </div>
-        <div v-show="step3">
-            <div class="step">
-                <input type="text" maxlength="6" placeholder="请输入6位验证码" class="authCode inputCode" v-model="authCode"
-                       @focus="errorMsg=''">
-                <span class="codeBtn" v-if="code"><i class="blue">{{time}}s</i>重新获取</span>
-                <input type="text" class="codeBtn blue" value="获取验证码" v-else @click="getCode" readonly="readonly">
-            </div>
-            <p class="errormsg">&nbsp{{errorMsg}}</p>
-            <div class="content">
-                <div class="btn" :class="authCode?'':'opacity'" @click="submit2">下一步</div>
-            </div>
-        </div>
+
         <div v-show="step2">
             <div class="step">
                 <input type="text" class="logPsw inputCode" maxlength="16" placeholder="设置登录密码" v-model="logPsw"
@@ -57,8 +46,21 @@
             </div>
             <p class="errormsg">&nbsp{{errorMsg}}</p>
             <div class="content">
-                <input type="button" value="完成" class="btn" :class="sucIcon3?'opacity':''" :disabled="sucIcon3"
-                       @click="submit3">
+                <input type="button" value="下一步" class="btn" :class="sucIcon3?'opacity':''" :disabled="sucIcon3"
+                       @click="submit2">
+            </div>
+        </div>
+
+        <div v-show="step3">
+            <div class="step">
+                <input type="text" maxlength="6" placeholder="请输入6位验证码" class="authCode inputCode" v-model="authCode"
+                       @focus="errorMsg=''">
+                <span class="codeBtn" v-if="code"><i class="blue">{{time}}s</i>重新获取</span>
+                <input type="text" class="codeBtn blue" value="获取验证码" v-else @click="getCode" readonly="readonly">
+            </div>
+            <p class="errormsg">&nbsp{{errorMsg}}</p>
+            <div class="content">
+                <div class="btn" :class="authCode?'':'opacity'" @click="submit3">完成</div>
             </div>
         </div>
 

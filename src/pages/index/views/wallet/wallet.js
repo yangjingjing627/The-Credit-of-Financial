@@ -22,7 +22,7 @@ export default {
             token: true,
             flag: false,//未登录弹框show
             flag1: false,//未实名和绑卡弹框show
-            flag2: true, //未绑卡弹框show
+            flag2: false, //未绑卡弹框show
             loading: true,
             msg: '您尚未实名认证，请先去认证',
             msg1: '您尚未绑定银行卡，请先去绑定',

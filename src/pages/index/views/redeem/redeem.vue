@@ -35,7 +35,8 @@
         </div>
 
         <!--密码弹框  -->
-        <div class="dealPwdDialog" v-if="show">
+        <!-- <div class="dealPwdDialog" v-if="show"> -->
+        <div class="dealPwdDialog">
             <div class="bd flexBox">
                 <div class="pswTitle tc">
                     <h2>输入银行数字安全密码</h2>

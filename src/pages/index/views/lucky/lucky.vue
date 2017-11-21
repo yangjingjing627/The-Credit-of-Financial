@@ -164,7 +164,6 @@
       height: 260px;
       margin: 0 auto 20px;
       background-color: #fff;
-      // box-shadow: 0px 0px 30px #ddd;
       border-radius: 8px;
 
       h2 {

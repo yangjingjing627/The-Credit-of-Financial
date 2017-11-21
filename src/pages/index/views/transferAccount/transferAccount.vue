@@ -156,7 +156,8 @@
 
     .bankPwd .bd {
         border: 1px solid #eee;
-        width: 633px;
+        width: 640px;
+        box-sizing: border-box;
         margin: 20px auto 30px auto;
         border-radius: 100px;
     }
