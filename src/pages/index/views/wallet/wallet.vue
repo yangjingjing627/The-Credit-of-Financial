@@ -5,54 +5,58 @@
                 <div class="ph ph-banner"></div>
             </div>
             <div v-show="!loading">
-                <div class="bg-gradient_1 f34 pt310" v-if="!token">
+                <div class="bg-gradient_1 f34" v-if="!token" style="padding-top: 50px;">
                     <div class="dec"></div>
-                    <div class="login-con arrow_r">
+                    <div class="flex_1 arrow_r">
                       <router-link class="f40 g3" to="login">立即登录</router-link>
                       <div class="tl f28 g9">马上登录开启财富管理</div>
                     </div>
                 </div>
                 <div class="flexBox bg-gradient pt163 pb20" :class="{finished:authStatus==50}" v-else>
+                <!-- <div class="flexBox bg-gradient_1 pt163 pb20"> -->
                     <div class="decoration"></div>
                     <div class="abs pl30 pr20">
                         <router-link to="/userCenter" class="iconW my"></router-link>
                         <router-link to="/settings" class="iconW set r"></router-link>
                     </div>
-                    <div v-if="authStatus<40" @click="isRealName" class="wallet">
-                        <div class="smile"></div>
-                        <p class="f30 gf tc pt20">导入数字钱包账户</p>
+                    <div v-if="authStatus<40" @click="isRealName" class="wallet bg-gradient_1 pt20 flex-x-c bg_icon">
+                    <!-- <div @click="isRealName" class="wallet bg-gradient_1 pt20 flex-x-c bg_icon"> -->
+                        <p class="f34 g3 tc pt20 width-100">导入数字钱包账户</p>
                     </div>
-                    <div v-if="authStatus==50" class="wallet">
-                        <div class="smile"></div>
-                        <router-link to="walletReceipt" class="flexBox">
-                            <div class="f30 gf tc pt20">{{realName}}的钱包</div>
-                            <div class="f24">{{walletAddress}}<span class="iconW ewm"></span></div>
+                    <div v-if="authStatus==50" class="wallet bg-gradient_1 pt20 flex-x-c">
+                    <!-- <div class="wallet bg-gradient_1 pt20 flex-x-c"> -->
+                        <div class="dec"></div>
+                        <router-link to="walletReceipt" class="flexBox flex_1">
+                            <div class="f40 g3">{{realName}}lucas的钱包</div>
+                            <div class="f28 tl g9">{{walletAddress}}变得得得的<span class="iconW ewm"></span></div>
                         </router-link>
                     </div>
-                    <div v-if="authStatus==40" class="wallet">
-                        <p class="f34 gf tc pt40">数字钱包账户申请中</p>
+                    <div v-if="authStatus==40" class="wallet bg-gradient_1 pt20 flex-x-c bg_icon">
+                      <!-- <div class="wallet bg-gradient_1 pt20 flex-x-c bg_icon"> -->
+                        <p class="f34 g3 tc pt20 width-100">数字钱包账户申请中</p>
                     </div>
-                    <div v-if="authStatus==60" class="wallet">
-                        <p class="f34 gf tc pt40">数字钱包账户申请失败</p>
+                    <div v-if="authStatus==60" class="wallet bg-gradient_1 pt20 flex-x-c bg_icon">
+                    <!-- <div class="wallet bg-gradient_1 pt20 flex-x-c bg_icon"> -->
+                        <p class="f34 g3 tc pt20 width-100">数字钱包账户申请失败</p>
                     </div>
                 </div>
             </div>
 
-            <div class="asset rel flexBox" v-show="authStatus==50&&token">
-                <div class="f26 g9"><span class="iconW iconW8"></span>总资产（元）</div>
-                <p class="f48 red">{{balance|toThousands}}</p>
-                <p class="line1"></p>
+            <!-- <div class="asset rel flexBox" v-show="authStatus==50&&token"> -->
+            <div class="asset rel flexBox">
+                <div class="f24 g9 tl width-100"><span class="iconW iconW8"></span>总资产（QBM）</div>
+                <p class="f48 g3 tl width-100 pl40">{{balance|toThousands}}0000000</p>
                 <ul class="flexA assetB bd-none">
-                    <li class="flexBox w49">
-                        <div class="f26 g9">可用余额（元）</div>
-                        <div class="f28 g3">{{balance|toThousands}}</div>
+                    <li class="flexBox w49 flexBox-1">
+                        <div class="f24 g9">可用余额（QBM）</div>
+                        <div class="f28 g3">{{balance|toThousands}}100</div>
                         <router-link to="purchase" class="buyBtn db">申 购</router-link>
                     </li>
                     <li class="line2"></li>
                     <div class="w49 db">
-                        <li class="flexBox">
-                            <div class="f26 g9">冻结金额（元）</div>
-                            <div class="f28 g3">{{frozenAmount|toThousands}}</div>
+                        <li class="flexBox flexBox-1">
+                            <div class="f24 g9">冻结金额（QBM）</div>
+                            <div class="f28 g3">{{frozenAmount|toThousands}}100</div>
                             <div class="buyBtn bg-blue db" :class="{gray_disabled : isDisabled}" @click="fRedeem">赎 回
                             </div>
                         </li>
@@ -170,13 +174,15 @@
     .my {
         padding:10px;
         box-sizing:content-box;
-        background-position: -80px -50px;
-    }
+        background: url("./images/person_icon.png") 0 0 no-repeat;
+        background-size: 30px 36px;
+      }
 
     .set {
          padding:10px;
         box-sizing:content-box;
-        background-position: -80px 0px;
+        background: url("./images/setting_icon.png") 0 0 no-repeat;
+        background-size: 34px 34px;
         text-align: right
     }
 
@@ -259,11 +265,11 @@
     }
 
     .asset {
-        margin: -66px auto 0;
+        margin: 20px 0;
         box-shadow: 0 0 10px 0 rgba(111, 31, 33, 0.08);
-        border-radius: 10px;
+        // border-radius: 10px;
         padding-top: 34px;
-        width: 690px;
+        // width: 690px;
         height: 400px;
         background: #fff;
     }
@@ -297,9 +303,11 @@
     .line1:after {
         right: -20px;
     }
-
+    .flexA {
+      margin: 0;
+    }
     .assetB {
-        padding: 34px 52px 0 62px;
+        padding: 34px 0 62px;
         width: 100%;
     }
 
@@ -318,19 +326,22 @@
     }
 
     .buyBtn {
-        width: 200px;
-        height: 60px;
+        width: 290px;
+        height: 78px;
         background: #FA5559;
         margin-top: 10px;
         border-radius: 100px;
         font-size: 30px;
         color: #fff;
         text-align: center;
-        line-height: 60px;
+        line-height: 78px;
+        box-shadow: 0 22px 23px rgba(250, 85, 89, 0.18);
+        font-weight: 300;
     }
 
     .bg-blue {
         background: #60CAFA;
+        box-shadow: 0 22px 23px rgba(59, 175, 218, 0.22);
     }
 
     /*总资产样式结束*/
@@ -483,8 +494,9 @@
     /*未实名弹框样式结束*/
     .bg-gradient_1 {
       display: flex;
+      height: 320px;
       background: #fff;
-      padding: 100px 40px 100px;
+      padding: 70px 40px 100px;
     }
     .dec {
       width: 113px;
@@ -492,9 +504,32 @@
       background: url("./images/man_icon.png") center no-repeat;
       background-size: 100%;
     }
-    .login-con {
+    .flex_1 {
       flex: 1;
       padding-left: 28px;
+      box-sizing: border-box;
+    }
+    .flex_1 {
+      flex: 1;
+      div {
+        width: 100%;
+        text-align: left;
+      }
+    }
+    .flex-x-c {
+      height: 240px;
+      align-items: center;
+    }
+    .width-100{
+      width: 100%;
+    }
+    .bg_icon {
+      background: url("./images/bg_icon.png") center no-repeat;
+      background-size: 260px 178px;
+    }
+    .flexBox-1 {
+      box-align: start;
+      padding-left: 40px;
       box-sizing: border-box;
     }
 </style>
