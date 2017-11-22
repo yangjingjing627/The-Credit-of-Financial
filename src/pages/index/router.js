@@ -508,10 +508,10 @@ const routeConfig = [
     {
         path: '/walletFinance',
         name: 'walletFinance',
-        component: walletFinance, //钱包理财页面
+        component: walletFinance, //我的理财页面
         meta: {
             back: true,
-            midText: '钱包理财'
+            midText: '我的理财'
         }
     },
     {
