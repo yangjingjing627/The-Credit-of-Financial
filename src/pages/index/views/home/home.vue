@@ -64,10 +64,10 @@
             <div class="bd fix">
                 <div class="l">
                     <h3 class="mtitle f30 g3">招财贷 我的申请动态</h3>
-                    <p class="label c9">22{{time}}</p>
+                    <p class="label c9">{{time}}</p>
                 </div>
                 <div class="r">
-                    <span class="status_audit">22{{status}}</span>
+                    <span class="status_audit">{{status}}</span>
                 </div>
             </div>
 
