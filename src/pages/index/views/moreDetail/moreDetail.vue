@@ -23,24 +23,24 @@
                 <dl class="p0">
                     <dt>审核记录</dt>
                     <dd>
-                      <ul class="bb">
-                          <li class="flexA h88 f24 g9 bg-f9">
+                      <ul class="bb bor">
+                          <li class="flexA h88 f24 g9 bg-f9  pl20 pr20">
                               <div class="tl w304">认证项目</div>
-                              <div class="tr w110">认证日期</div>
-                              <div class="tc w100">认证结果</div>
+                              <div class="tr w140">认证日期</div>
+                              <div class="tc w120">认证结果</div>
                           </li>
-                          <li class="a">
-                              <div class="flexA bg-white h88" @click="fItemClick(index)">
+                          <li class="a bor-b pl20 pr20">
+                              <div class="flexA bg-white h88">
                                   <div class="tl w304 f24 g3">2sndssmsdnsddn22</div>
-                                  <div class="tr w110 f24 g3">2018-09-09</div>
-                                  <div class="tc w100 f24 g3 ok"></div>
+                                  <div class="tr w140 f24 g3">2018-09-09</div>
+                                  <div class="tc w120 f24 g3 ok"></div>
                               </div>
                           </li>
-                          <li class="a">
-                              <div class="flexA bg-white h88" @click="fItemClick(index)">
+                          <li class="a bor-b pl20 pr20">
+                              <div class="flexA bg-white h88">
                                   <div class="tl w304 f24 g3">2sndssmsdnsddn22</div>
-                                  <div class="tr w110 f24 g3">2018-09-09</div>
-                                  <div class="tc w100 f24 g3 error"></div>
+                                  <div class="tr w140 f24 g3">2018-09-09</div>
+                                  <div class="tc w120 f24 g3 error"></div>
                               </div>
                           </li>
                       </ul>
@@ -176,15 +176,23 @@
       background: url(./images/error.png) no-repeat center;
       background-size: 30px 30px;
     }
-    .w100 {
-      width: 100px;
+    .w140 {
+      width: 140px;
+    }
+    .w120 {
+      width: 120px;
     }
     .w304 {
       width: 304px;
     }
-
+    .bor-b {
+      border-bottom: 1px solid #eee;
+    }
+    .bor {
+      border-bottom: 1px solid #eee;
+    }
       .bb {
-          border-bottom: 1px solid #efeded
+          border: 1px solid #efeded
       }
         .flexA {
           margin: 0;
