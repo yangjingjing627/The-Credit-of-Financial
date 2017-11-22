@@ -65,7 +65,7 @@
         height: 100%;
         text-align: center;
         color: #5D656B;
-        background-color: #f9f9f9;
+        background-color: #fff;
         border-top: 1px solid #E7E7E7;
         font-size: 24px;
 

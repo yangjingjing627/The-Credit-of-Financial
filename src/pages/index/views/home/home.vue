@@ -3,10 +3,10 @@
         <div class="main">
             <div class="head">
                 <input type="text" name="search" class="inpSearch" placeholder="搜索"/>
-                <router-link to="notice" class="icon_notice"></router-link>
+                <!-- <router-link to="notice" class="icon_notice"></router-link> -->
             </div>
             <div class="nav">
-                <ul class="fix">
+                <ul class="flex">
                     <li>
                         <div @click="fScanQRCode">
                             <span class="icon icon_richScan"></span>
@@ -27,9 +27,30 @@
                     </li>
                 </ul>
             </div>
+            <div class="announce">公告：关于银行渠道升级通知</div>
+        </div>
+        <div class="project bg-white">
+          <div class="pro pro-l">
+            <div class="icon1 relative">
+              <p class='absolute gf f28 fw300'>商户借款 ></p>
+            </div>
+          </div>
+          <div class="pro pro-r flex colunm">
+            <div class="pro-r-t  flex-1 mb10 pro2">
+              <div class="icon2 relative">
+                <p class='absolute gf f28 bottom20 fw300'>精选理财 ></p>
+              </div>
+            </div>
+            <div class="pro-r-b flex-1 pro3 mt10">
+              <div class="icon3 relative">
+                <p class='absolute gf f28 fw300 top20'>更多功能</p>
+                <p class='absolute gf f28 bottom20 fw300'>敬请期待...</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="sidebar">
+        <!-- <div class="sidebar">
             <ul class="fix">
                 <li>
                     <router-link to="lucky">
@@ -68,67 +89,73 @@
                     <h3 class="mtitle">更多</h3>
                 </li>
             </ul>
-        </div>
+        </div> -->
 
         <div class="home_banner">
             <div class="banner_bg"></div>
         </div>
 
         <!-- 招财贷 申请动态 -->
-        <div class="bidDynamic bg-white mt20" v-if="bynamic">
+        <!-- <div class="bidDynamic bg-white mt20" v-if="bynamic"> -->
+        <div class="bidDynamic bg-white mt20">
+          <div class="ft">
+              <span class="tl icon_dynamic f30 g3">最新动态</span>
+              <router-link :to="url" class="tr fw300 more blue">查看更多</router-link>
+          </div>
             <div class="bd fix">
-                <span class="icon icon_dynamic l"></span>
                 <div class="l">
-                    <h3 class="mtitle">招财贷 我的申请动态</h3>
-                    <p class="label c9">{{time}}</p>
+                    <h3 class="mtitle f30 g3">招财贷 我的申请动态</h3>
+                    <p class="label c9">22{{time}}</p>
                 </div>
                 <div class="r">
-                    <span class="status_audit">{{status}}</span>
+                    <span class="status_audit">22{{status}}</span>
                 </div>
             </div>
-            <div class="ft">
-                <router-link :to="url" class="tc more">查看更多</router-link>
-            </div>
+
         </div>
 
         <!-- 招财贷 昨日收益 -->
-        <!-- <div class="bidDynamic bg-white mt20">
+        <div class="bidDynamic bg-white mt20 mb20">
+          <div class="ft">
+            <span class="tl icon_earnings f30 g3">最新收益</span>
+            <router-link to="bidDetail" class="tr fw300 more blue">查看更多</router-link>
+          </div>
             <div class="bd fix">
-                <span class="icon icon_earnings l"></span>
                 <div class="l">
-                    <h3 class="mtitle">招财贷 我的昨日收益</h3>
-                    <p class="label c9">9:00</p>
-                    <div class="money_con">
-                        <span class="icon_money">￥</span><span class="money">+12.99</span>
-                    </div>
+                    <h3 class="mtitle mt10 f30 g3 ">招财贷 我的昨日收益</h3>
                     <p class="label">8-11好贷宝收益</p>
                 </div>
+                <div class="r">
+                    <div class="money_con">
+                      <span class="money red">+12.99</span>
+                    </div>
+                    <p class="label c9">9:00</p>
+                </div>
             </div>
-            <div class="ft">
-                <router-link to="bidDetail" class="tc more">查看更多</router-link>
-            </div>
-        </div> -->
+        </div>
     </div>
 </template>
 <style lang="sass" scoped>
     .main {
-        background: url(images/bg_head.png) no-repeat;
+        // background: url(images/bg_head.png) no-repeat;
         height: 387px;
         width: 100%;
-        background-size: 100%;
-        padding: 50px 20px 50px 30px;
+        // background-size: 100%;
+        padding: 50px 30px 50px 30px;
+        background-color: #fff;
     }
 
     .inpSearch {
-        background: #fff url(./../static/images/icon_search.png) no-repeat 30px center;
+        background: #F8F8F8 url(./../static/images/icon_search.png) no-repeat 30px center;
         background-size: 26px 26px;
         border-radius: 100px;
-        width: 618px;
+        // width: 618px;
+        width: 100%;
         height: 56px;
         line-height: 56px;
         font-size: 28px;
-        padding-left: 75px;
-        margin-right: 12px;
+        padding-left: 72px;
+        margin-right: 30px;
     }
 
     .icon_notice {
@@ -158,11 +185,11 @@
     }
 
     .nav {
-        background: #fff;
-        box-shadow: 0 1px 22px 0 rgba(207, 114, 84, 0.32);
-        border-radius: 10px;
+        // background: #fff;
+        // box-shadow: 0 1px 22px 0 rgba(207, 114, 84, 0.32);
+        // border-radius: 10px;
         margin: 40px auto 0 auto;
-        padding: 0 30px;
+        // padding: 0 30px;
     }
 
     .nav li {
@@ -180,12 +207,13 @@
         text-align: center;
         display: block;
     }
-    
+
     .nav li .icon {
-        width: 110px;
-        height: 110px;
-        background-size: 100%;
+        width: 100%;
+        height: 48px;
+        background-size: 48px 48px;
         background-repeat: no-repeat;
+        background-position: center;
     }
 
     .nav li .icon_richScan {
@@ -221,7 +249,7 @@
     .sidebar li .mtitle {
         font-size: 26px;
     }
-    
+
 
     .sidebar li:nth-child(4), .sidebar li:nth-child(8) {
         border-right: 0;
@@ -286,12 +314,14 @@
         border-bottom: 1px solid #eee;
     }
 
-    .bidDynamic .bd .icon_dynamic {
-        background: url(images/icon_dynamic.png) no-repeat;
+    .icon_dynamic {
+        background: url(images/icon_dynamic.png) no-repeat left center;
+        background-size: 21px 24px;
     }
 
-    .bidDynamic .bd .icon_earnings {
-        background: url(images/icon_earnings.png) no-repeat;
+    .icon_earnings {
+        background: url(images/icon_earnings.png) no-repeat left center;
+        background-size: 21px 24px;
     }
 
     .bidDynamic .bd .icon {
@@ -309,7 +339,8 @@
 
     .bidDynamic .bd .label {
         padding: 12px 0;
-        color: #999;
+        color: #ccc;
+        font-size: 28px;
     }
 
     .bidDynamic .bd .status_audit {
@@ -340,16 +371,109 @@
     }
 
     .bidDynamic .bd .money {
-        font-size: 54px;
+        font-size: 48px;
         line-height: 48px;
         letter-spacing: -0.58px;
     }
 
     .bidDynamic .ft .more {
         font-size: 28px;
-        color: #666666;
-        padding: 20px 0;
+        padding: 28px 0;
         display: block;
+    }
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li {
+        flex: 1;
+      }
+    }
+    .announce {
+      background: url(images/icon_dynamic.png) no-repeat left center;
+      background-size: 23px 23px;
+      padding: 20px 30px;
+      border-top: 1px solid #eee;
+    }
+    .project {
+      margin: 20px 0;
+      padding: 20px 30px;
+      display: flex;
+      height: 240px;
+    }
+    .pro-l {
+      width: 297px;
+      height: 100%;
+      background: linear-gradient(left top, #FFB4B2 , #FE4747);
+      margin-right: 20px;
+      box-shadow: 0 2px 4px rgba(254, 71, 71, 0.57);
+      border-radius: 24px;
+    }
+    .pro-r {
+      width: 394px;
+      height: 100%;
+    }
+    .pro2 {
+      background: linear-gradient(left top, #FFB6C7 , #FE4994);
+      box-shadow: 0 2px 4px rgba(255, 98, 154, 0.46);
+      border-radius: 24px;
+    }
+    .pro3 {
+      background: linear-gradient(top, #5E97FF , #29AFFF);
+      box-shadow: 0 4px 12px rgba(73, 160, 154, 0.34);
+      border-radius: 24px;
+    }
+    .icon1 {
+      background: url(images/icon1.png) no-repeat center;
+      background-size: contain;
+    }
+    .icon2 {
+      background: url(images/icon2.png) no-repeat center;
+      background-size: contain;
+      // margin-bottom: 20px;
+    }
+    .icon3 {
+      background: url(images/icon3.png) no-repeat center;
+      background-size: contain;
+    }
+    .relative {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .absolute{
+      position: absolute;
+      right: 35px;
+      bottom: 35px;
+    }
+    .flex {
+      display: flex;
+    }
+    .colunm {
+      flex-direction:column;
+    }
+    .flex-1 {
+      flex: 1;
+      width: 100%;
+    }
+    .icon2, .icon3 {
+      width: 100%;
+    }
+    .bottom20 {
+      bottom: 20px;
+    }
+    .top20 {
+      top: 20px;
+      left: 20px;
+    }
+    .ft {
+      position: relative;
+      span {
+        position: absolute;
+        top: 28px;
+        left: 0px;
+        padding-left: 30px;
+      }
     }
 </style>
 <script src="./home.js"></script>
