@@ -49,23 +49,23 @@
             </div>
             <!--区块信息  -->
             <div class="divOutline g6 f30" v-show="section == 1">
-                <div class="flexA">
-                    <h5>区块高度</h5>
+                <div class="flexA h50">
+                    <h5 class="f24 g6">区块高度</h5>
                     <!-- <div class="w500">{{blockResult.blockNumber}}</div> -->
-                    <div class="w500">费用</div>
+                    <div class="w500 f24 g9">97789</div>
                 </div>
-                <div class="flexA">
-                    <h5>交易次数</h5>
-                    <div class="w500">{{blockResult.envelopCount}}</div>
+                <div class="flexA h50">
+                    <h5 class="f24 g6">交易次数</h5>
+                    <div class="w500 f24 g9">1222{{blockResult.envelopCount}}</div>
                 </div>
-                <div class="flexA">
-                    <h5>区块哈希</h5>
-                    <div class="w500">{{blockResult.dataHash}}</div>
+                <div class="flexA h50">
+                    <h5 class="f24 g6">区块哈希</h5>
+                    <div class="w500 f24 g9">0000023923892392329839wjw{{blockResult.dataHash}}</div>
                 </div>
-                <div class="flexA">
-                    <h5>上一块哈希</h5>
+                <div class="flexA h50">
+                    <h5 class="f24 g6">上一块哈希</h5>
                     <!-- <div class="w500">{{blockResult.previousHash}}</div> -->
-                    <div class="w500">十几年三叉神经承诺书那才是</div>
+                    <div class="w500 f24 g9">0000023923892392329839wjw</div>
 
                 </div>
             </div>
@@ -193,6 +193,10 @@
     }
       .bb {
           border: 1px solid #efeded
+      }
+      .h50 {
+        height: 70px;
+        line-height: 70px;
       }
         .flexA {
           margin: 0;
