@@ -10,7 +10,7 @@
                 <dl>
                     <dt>融资方介绍</dt>
                     <!-- <dd v-text="detailResult.borrowerDescription"></dd> -->
-                    <dd>你的就是刺激到处三叉神经菜市场你的就是刺激到处三叉神经菜市场你的就是刺激到处三叉神经菜市场你的就是刺激到处三叉神经菜市场</dd>
+                    <dd>如果你无法简介的表达你的想法，那就只说明你不够了解它---阿尔伯特</dd>
                 </dl>
                 <!-- <dl>
                     <dt>征信信息</dt>
@@ -20,13 +20,39 @@
                     <dt>担保信息</dt>
                     <dd v-text="detailResult.guaranteeInformation"></dd>
                 </dl> -->
+                <dl class="p0">
+                    <dt>审核记录</dt>
+                    <dd>
+                      <ul class="bb">
+                          <li class="flexA h88 f24 g9 bg-f9">
+                              <div class="tl w304">认证项目</div>
+                              <div class="tr w110">认证日期</div>
+                              <div class="tc w100">认证结果</div>
+                          </li>
+                          <li class="a">
+                              <div class="flexA bg-white h88" @click="fItemClick(index)">
+                                  <div class="tl w304 f24 g3">2sndssmsdnsddn22</div>
+                                  <div class="tr w110 f24 g3">2018-09-09</div>
+                                  <div class="tc w100 f24 g3 ok"></div>
+                              </div>
+                          </li>
+                          <li class="a">
+                              <div class="flexA bg-white h88" @click="fItemClick(index)">
+                                  <div class="tl w304 f24 g3">2sndssmsdnsddn22</div>
+                                  <div class="tr w110 f24 g3">2018-09-09</div>
+                                  <div class="tc w100 f24 g3 error"></div>
+                              </div>
+                          </li>
+                      </ul>
+                    </dd>
+                </dl>
             </div>
             <!--区块信息  -->
             <div class="divOutline g6 f30" v-show="section == 1">
                 <div class="flexA">
                     <h5>区块高度</h5>
                     <!-- <div class="w500">{{blockResult.blockNumber}}</div> -->
-                    <div class="w500">十几年三叉神经承诺书那才是</div>
+                    <div class="w500">费用</div>
                 </div>
                 <div class="flexA">
                     <h5>交易次数</h5>
@@ -40,7 +66,7 @@
                     <h5>上一块哈希</h5>
                     <!-- <div class="w500">{{blockResult.previousHash}}</div> -->
                     <div class="w500">十几年三叉神经承诺书那才是</div>
-                    
+
                 </div>
             </div>
         </div>
@@ -134,5 +160,37 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
+    .p0 {
+      padding: 0;
+    }
+    .bg-f9 {
+      background-color: #F9F9F9;
+    }
+    .ok {
+      height: 30px;
+      background: url(./images/ok.png) no-repeat center;
+      background-size: 30px 30px;
+    }
+    .error {
+      height: 30px;
+      background: url(./images/error.png) no-repeat center;
+      background-size: 30px 30px;
+    }
+    .w100 {
+      width: 100px;
+    }
+    .w304 {
+      width: 304px;
+    }
+
+      .bb {
+          border-bottom: 1px solid #efeded
+      }
+        .flexA {
+          margin: 0;
+        }
+          .h88 {
+              height: 88px;
+          }
 </style>
 <script src="./moreDetail.js"></script>

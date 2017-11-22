@@ -16,7 +16,7 @@
                 <div class="tl w146">还款日期</div>
                 <div class="tr w210">还款状态</div>
             </li>
-            <li class="a" :class="{b:activeIndex==index}" v-for="(item,index) in  repaymentList">
+            <!-- <li class="a" :class="{b:activeIndex==index}" v-for="(item,index) in  repaymentList">
                 <div class="flexA bg-white h88" @click="fItemClick(index)">
                     <div class="tc w54  f24 g3">{{index+1}}</div>
                     <div class="tl w184  f24 g3">{{item.amount}}</div>
@@ -37,8 +37,8 @@
                         <div>{{item.cost}}</div>
                     </li>
                 </ul>
-            </li>
-            <!-- <li class="a">
+            </li> -->
+            <li class="a">
                 <div class="flexA bg-white h88" @click="fItemClick(index)">
                     <div class="tc w54 f24 g3">1</div>
                     <div class="tl w184 f24 g3">222</div>
@@ -59,7 +59,7 @@
                         <div>200</div>
                     </li>
                 </ul>
-            </li> -->
+            </li>
         </ul>
     </div>
 </template>
