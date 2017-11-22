@@ -50,47 +50,6 @@
           </div>
         </div>
 
-        <!-- <div class="sidebar">
-            <ul class="fix">
-                <li>
-                    <router-link to="lucky">
-                        <span class="icon icon_borrow"></span>
-                        <h3 class="mtitle">商户借款</h3>
-                    </router-link>
-                </li>
-                <li>
-                    <router-link to="project">
-                        <span class="icon icon_manage"></span>
-                        <h3 class="mtitle">精选理财</h3>
-                    </router-link>
-                </li>
-                <li>
-                    <span class="icon icon_creditCard"></span>
-                    <h3 class="mtitle">信用卡优惠</h3>
-                </li>
-                <li>
-                    <span class="icon icon_live"></span>
-                    <h3 class="mtitle">钱包生活</h3>
-                </li>
-                <li>
-                    <span class="icon icon_steward"></span>
-                    <h3 class="mtitle">钱包管家</h3>
-                </li>
-                <li>
-                    <span class="icon icon_taxi"></span>
-                    <h3 class="mtitle">健康出行</h3>
-                </li>
-                <li>
-                    <span class="icon icon_carport"></span>
-                    <h3 class="mtitle">车位管家</h3>
-                </li>
-                <li>
-                    <span class="icon icon_more"></span>
-                    <h3 class="mtitle">更多</h3>
-                </li>
-            </ul>
-        </div> -->
-
         <div class="home_banner">
             <div class="banner_bg"></div>
         </div>
@@ -137,10 +96,8 @@
 </template>
 <style lang="sass" scoped>
     .main {
-        // background: url(images/bg_head.png) no-repeat;
         height: 387px;
         width: 100%;
-        // background-size: 100%;
         padding: 50px 30px 50px 30px;
         background-color: #fff;
     }
@@ -149,7 +106,6 @@
         background: #F8F8F8 url(./../static/images/icon_search.png) no-repeat 30px center;
         background-size: 26px 26px;
         border-radius: 100px;
-        // width: 618px;
         width: 100%;
         height: 56px;
         line-height: 56px;
@@ -185,11 +141,7 @@
     }
 
     .nav {
-        // background: #fff;
-        // box-shadow: 0 1px 22px 0 rgba(207, 114, 84, 0.32);
-        // border-radius: 10px;
         margin: 40px auto 0 auto;
-        // padding: 0 30px;
     }
 
     .nav li {
