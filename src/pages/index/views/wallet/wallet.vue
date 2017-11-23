@@ -12,7 +12,7 @@
                       <div class="tl f28 g9">马上登录开启财富管理</div>
                     </div>
                 </div>
-                <div class="flexBox bg-gradient pt163 pb20" :class="{finished:authStatus==50}" v-else>
+                <div class="flexBox bg-gradient_1 pt163 pb20" :class="{finished:authStatus==50}" v-else>
                 <!-- <div class="flexBox bg-gradient_1 pt163 pb20"> -->
                     <div class="decoration"></div>
                     <div class="abs pl30 pr20">
@@ -20,7 +20,6 @@
                         <router-link to="/settings" class="iconW set r"></router-link>
                     </div>
                     <div v-if="authStatus<40" @click="isRealName" class="wallet bg-gradient_1 pt20 flex-x-c bg_icon">
-                    <!-- <div @click="isRealName" class="wallet bg-gradient_1 pt20 flex-x-c bg_icon"> -->
                         <p class="f34 g3 tc pt20 width-100">导入数字钱包账户</p>
                     </div>
                     <div v-if="authStatus==50" class="wallet bg-gradient_1 pt20 flex-x-c">
@@ -42,8 +41,8 @@
                 </div>
             </div>
 
-            <!-- <div class="asset rel flexBox" v-show="authStatus==50&&token"> -->
-            <div class="asset rel flexBox">
+            <div class="asset rel flexBox" v-show="authStatus==50&&token">
+            <!-- <div class="asset rel flexBox"> -->
                 <div class="f24 g9 tl width-100"><span class="iconW iconW8"></span>总资产（QBM）</div>
                 <p class="f48 g3 tl width-100 pl40">{{balance|toThousands}}0000000</p>
                 <ul class="flexA assetB bd-none">
