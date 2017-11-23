@@ -530,6 +530,7 @@ const routeConfig = [
         meta: {
             back: true,
             midText: '钱包收款'
+            // rightText: '我要转账'
         }
     },
     {

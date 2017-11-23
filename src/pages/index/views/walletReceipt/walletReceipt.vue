@@ -1,5 +1,6 @@
 <template>
     <div class="walletReceipt tc bg-white mt20">
+      <router-link to="transferAccount" class="f28 g6 rightText fw300">我要转账</router-link>
         <div class="hd">
             <div class="title" v-if="isSet==0">
                 <span class="icon_wallet icon_wallet_ahead"></span>
@@ -112,6 +113,10 @@
     .g9b {
       color: #9B9B9B;
     }
-
+    .rightText {
+      position: absolute;
+      right: 20px;
+      top: 34px;
+    }
 </style>
 <script src="./walletReceipt.js"></script>
