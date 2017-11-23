@@ -51,8 +51,7 @@
             <div class="divOutline g6 f30" v-show="section == 1">
                 <div class="flexA h50">
                     <h5 class="f24 g6">区块高度</h5>
-                    <!-- <div class="w500">{{blockResult.blockNumber}}</div> -->
-                    <div class="w500 f24 g9">97789</div>
+                    <div class="w500 f24 g9">{{blockResult.blockNumber}}</div>
                 </div>
                 <div class="flexA h50">
                     <h5 class="f24 g6">交易次数</h5>
@@ -60,13 +59,11 @@
                 </div>
                 <div class="flexA h50">
                     <h5 class="f24 g6">区块哈希</h5>
-                    <div class="w500 f24 g9">0000023923892392329839wjw{{blockResult.dataHash}}</div>
+                    <div class="w500 f24 g9">{{blockResult.dataHash}}</div>
                 </div>
                 <div class="flexA h50">
                     <h5 class="f24 g6">上一块哈希</h5>
-                    <!-- <div class="w500">{{blockResult.previousHash}}</div> -->
-                    <div class="w500 f24 g9">0000023923892392329839wjw</div>
-
+                    <div class="w500  f24 g9">{{blockResult.previousHash}}</div>
                 </div>
             </div>
         </div>
