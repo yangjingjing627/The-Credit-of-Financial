@@ -246,6 +246,14 @@ const repayPlan = resolve => {
         resolve(require('./views/repayPlan/repayPlan.vue'))
     }, 'repayPlan')
 }
+/*
+  钱包生活
+*/
+const qianbaoLifeHome = resolve => {
+    require.ensure(['./views/qianbaoLifeHome/qianbaoLifeHome.vue'], () => {
+        resolve(require('./views/qianbaoLifeHome/qianbaoLifeHome.vue'))
+    }, 'qianbaoLifeHome')
+}
 
 const routeConfig = [
     {path: '/', redirect: '/home'},
@@ -716,7 +724,19 @@ const routeConfig = [
             back: true,
             midText: '身份认证'
         }
-    }
+    },
+    /*
+      钱包生活部分
+    */
+    {
+        path: '/qianbaoLifeHome',
+        name: 'qianbaoLifeHome',
+        component: qianbaoLifeHome, //钱包生活home页
+        meta: {
+            back: true,
+            midText: '钱包生活'
+        }
+    },
 ];
 
 const router = new VueRouter({

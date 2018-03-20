@@ -58,7 +58,7 @@ export default {
                     console.log(res);
                 })
             }else{
-                this. showPage();
+                this.showPage();
             }
         },
         showPage(){//根据url传过来的状态显示页面
