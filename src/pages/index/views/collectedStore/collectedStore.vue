@@ -1,14 +1,5 @@
 <template>
     <div class="bg-white h-100">
-      <div class="bte bbe flexA flexA1">
-        <!-- <p><span></span>北京<i><i></p> -->
-          <h5>北京</h5>
-          <div class="g6 w540 h56"><input class="db input inpSearch pl66 radius100" type="text" placeholder="找优惠点我试试" name="" value=""></div>
-      </div>
-      <div class="flexA bg-f8 margin0">
-          <h5 class="g3 f24">我的位置：朝阳区酒仙桥南路29号</h5>
-          <div class="arrow_b"></div>
-      </div>
       　<div class="store-list">
           <div class="flexA flex bbe">
               <div class="img"></div>
@@ -77,17 +68,12 @@
     </div>
 </template>
 <style lang="sass" scoped>
-  .flexA1 {
-    margin: 0;
-    padding: 0 40px;
-  }
   .h-100 {
     height: 100%;
     overflow: hidden;
   }
   .store-list {
     height: 100%;
-    padding-bottom: 300px;
     overflow: scroll;
   }
   .w540 {
@@ -99,37 +85,6 @@
   .pl66 {
     padding-left: 66px;
   }
-  .radius100 {
-    border-radius: 100px;
-  }
-  .input {
-    color: #A0A2A7;
-    font-size: 28px;
-    opacity: 0.5;
-    line-height: 56px;
-  }
-  .inpSearch {
-      background: #F8F8F8 url(./../static/images/icon_search.png) no-repeat 20px center;
-      background-size: 28px 30px;
-      border-radius: 100px;
-      width: 100%;
-      height: 56px;
-      line-height: 56px;
-      font-size: 28px;
-  }
-  .arrow_b {
-      background: #F8F8F8 url(./../static/images/arrow_b.png) no-repeat left center;
-      background-size: 28px 30px;
-      padding-right: 40px;
-      height: 30px;
-  }
-    .bg-f8 {
-      background: #F8F8F8;
-    }
-    .margin0 {
-      padding: 40px;
-      margin: 0;
-    }
     .flex {
       height: auto;
       display: flex;
@@ -169,4 +124,4 @@
         }
       }
 </style>
-<script src="./qianbaoLifeHome.js"></script>
+<script src="./collectedStore.js"></script>

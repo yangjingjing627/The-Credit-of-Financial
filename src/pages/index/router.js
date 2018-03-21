@@ -254,6 +254,17 @@ const qianbaoLifeHome = resolve => {
         resolve(require('./views/qianbaoLifeHome/qianbaoLifeHome.vue'))
     }, 'qianbaoLifeHome')
 }
+const storeSearch = resolve => {
+    require.ensure(['./views/storeSearch/storeSearch.vue'], () => {
+        resolve(require('./views/storeSearch/storeSearch.vue'))
+    }, 'storeSearch')
+}
+const collectedStore = resolve => {
+    require.ensure(['./views/collectedStore/collectedStore.vue'], () => {
+        resolve(require('./views/collectedStore/collectedStore.vue'))
+    }, 'collectedStore')
+}
+
 
 const routeConfig = [
     {path: '/', redirect: '/home'},
@@ -737,6 +748,24 @@ const routeConfig = [
             midText: '钱包生活'
         }
     },
+    {
+        path: '/collectedStore',
+        name: 'collectedStore',
+        component: collectedStore, //钱包生活-收藏的店
+        meta: {
+            back: true,
+            midText: '收藏的店'
+        }
+    },
+    {
+        path: '/storeSearch',
+        name: 'storeSearch',
+        component: storeSearch, //钱包生活-搜索店铺
+        meta: {
+            back: true,
+            midText: '钱包生活'
+        }
+    }
 ];
 
 const router = new VueRouter({
