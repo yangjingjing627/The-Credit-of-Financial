@@ -762,8 +762,7 @@ const routeConfig = [
         name: 'storeSearch',
         component: storeSearch, //钱包生活-搜索店铺
         meta: {
-            back: true,
-            midText: '钱包生活'
+          show: false
         }
     }
 ];
