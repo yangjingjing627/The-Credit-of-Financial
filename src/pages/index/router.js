@@ -264,7 +264,11 @@ const collectedStore = resolve => {
         resolve(require('./views/collectedStore/collectedStore.vue'))
     }, 'collectedStore')
 }
-
+const storeDetails = resolve => {
+    require.ensure(['./views/storeDetails/storeDetails.vue'], () => {
+        resolve(require('./views/storeDetails/storeDetails.vue'))
+    }, 'storeDetails')
+}
 
 const routeConfig = [
     {path: '/', redirect: '/home'},
@@ -764,7 +768,15 @@ const routeConfig = [
         meta: {
           show: false
         }
-    }
+    },
+    {
+        path: '/storeDetails',
+        name: 'storeDetails',
+        component: storeDetails, //钱包生活-搜索店铺
+        meta: {
+          show: false
+        }
+    },
 ];
 
 const router = new VueRouter({
