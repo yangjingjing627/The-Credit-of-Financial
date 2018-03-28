@@ -11,7 +11,7 @@
       <div class="padx">
         <p class="g3 f28 pl40 pb10 icon-zhe">买单9.5折，部分优惠</p>
         <p class="g9 f24 pl40 pb40">每天</p>
-        <p class="f28 gtan tc pb30"><span class="dashed"></span> 优惠说明 <span class="dashed"></span></p>
+        <p class="margin-60 f28 gtan tc pb30"><span class="dashed"></span> 优惠说明 <span class="dashed"></span></p>
         <p class="g9 f28 pl40">使用说明：<span class="g3 f28">饮料项目除外  不与其他优惠同享</span></p>
       </div>
       <div class="bge h20"></div>
@@ -62,8 +62,11 @@
 .padx {
   padding: 28px 0 38px 60px;
 }
+.margin-60 {
+  margin-left: -60px;
+}
 .pl40 {
-  padding-left: 60px;
+  padding-left: 40px;
 }
 .marginlr30 {
   margin: 0 30px;
