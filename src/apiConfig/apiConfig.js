@@ -1,6 +1,7 @@
-var baseUrl = 'https://dev-apis.qianbao.com/';  // 开发环境
+// var baseUrl = 'https://dev-apis.qianbao.com/';  // 开发环境
 // var baseUrl = 'https://apis.qianbao.com/';  // 生产环境
 // var baseUrl = 'https://sit-apis.qianbao.com/';  // 测试环境
+var baseUrl = 'http://172.28.40.117:9999/';  // 生产环境
 
 module.exports = {
     "project": baseUrl + "jiedai/v1/p2p/loans", //项目列表
@@ -47,5 +48,6 @@ module.exports = {
     "trial": baseUrl + "jiedai/v1/loan/xdcore/trial?QB_AUTH_TOKEN=", //借款试算接口
     "getCode2": baseUrl + "jiedai/v1/loan/xdcore/application/auth/sms?QB_AUTH_TOKEN=", //进件获取验证码
     "checkCode2": baseUrl + "jiedai/v1/loan/xdcore/application/auth/sms/check?QB_AUTH_TOKEN=",//进件验证验证码
-
+// 钱包生活
+    "collect": baseUrl + "app/wallet/store/collect",// 商铺类型
 }
