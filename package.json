@@ -32,6 +32,7 @@
     "js-md5": "^0.6.0",
     "jsencrypt": "^2.3.1",
     "lodash": "^4.17.4",
+    "mint-ui": "^2.2.13",
     "mockjs": "^1.0.0",
     "object-assign": "^4.1.1",
     "qrious": "^4.0.2",
