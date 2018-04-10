@@ -19,6 +19,11 @@ import overlay from 'widget/overlay';
 import {Alert,Confirm,Box} from 'widget/modal/index.js';
 import VueQriously from 'widget/vue-qriously';
 import 'widget/util/jsbridge';  // 桥接
+/*
+* 引入mint-ui
+*/
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
 
 Vue.component('c-cHeader',cHeader);
 Vue.use(VueRouter);
@@ -30,6 +35,10 @@ Vue.use(Confirm);
 Vue.use(Box);
 // Vue.use(VeeValidate);
 Vue.use(VueQriously);
+/*
+* 引入mint-ui
+*/
+Vue.use(MintUI)
 
 // window.addEventListener('load', () => {
 //   FastClick.attach(document.body)

@@ -54,3 +54,6 @@ color: #666;
 min-width: 24px;
 ### 主题红色
 color/background-color: #FA5559;
+### 引入iconfont
+在阿里矢量库官网，复制.css连接，在html里link，便可使用
+eg: <i class="icon iconfont icon-shanchu"></i>

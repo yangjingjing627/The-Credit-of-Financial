@@ -1,7 +1,12 @@
 <template>
     <div class="bg-white">
       　<div class="store-img">
-          <img src="" alt="">
+          <!-- <img src="" alt=""> -->
+          <mt-swipe :auto="4000">
+            <mt-swipe-item>1第一张图片</mt-swipe-item>
+            <mt-swipe-item>2第二张图片</mt-swipe-item>
+            <mt-swipe-item>3第三张图片</mt-swipe-item>
+          </mt-swipe>
       　</div>
       <div class="pt30 pb30 tc">
         <p class="g3 f34 pb20">优之良品（京通罗斯福广场店）</p>

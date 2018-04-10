@@ -10,6 +10,11 @@
           <div class="arrow_b"></div>
       </div>
       　<div class="store-list">
+        <mt-swipe :auto="4000">
+          <mt-swipe-item>1实弹射击当时的百货商店时间都是假的1</mt-swipe-item>
+          <mt-swipe-item>2三等奖和世界杯胡说八道实弹射击倒计时</mt-swipe-item>
+          <mt-swipe-item>3时间倒计时倒计时倒计时呢</mt-swipe-item>
+        </mt-swipe>
           <div class="flexA flex bbe">
               <div class="img"></div>
               <div class="storeInfo">
