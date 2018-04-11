@@ -15,16 +15,16 @@ export default {
       collect() {
         this.$http.get(api.collect).then(function (response) {
             console.log(response);
-            // if(response.body.result){
-            //   this.billResult = response.body.result.orderResList;
-            //   this.totalPages = response.body.result.totalPages
-            //   this.pagenum = this.pagenum +1
-            //   if(this.pagenum <= this.totalPages) {
-            //     this.isMore = true
-            //   }else {
-            //     this.isMore = false
-            //   }
-            // }
+            if(response.body.result){
+              this.collectedStoreList = response.body.result;
+              // this.totalPages = response.body.result.totalPages
+              // this.pagenum = this.pagenum +1
+              // if(this.pagenum <= this.totalPages) {
+              //   this.isMore = true
+              // }else {
+              //   this.isMore = false
+              // }
+            }
         }).catch(function (res) {
             console.log(res)
         })

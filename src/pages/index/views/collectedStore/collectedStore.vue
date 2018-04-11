@@ -1,8 +1,8 @@
 <template>
     <div class="bg-white h-100">
       　<div class="store-list">
-          <div class="flexA flex bbe">
-              <div class="img"></div>
+          <div class="flexA flex bbe" v-for="item in collectedStoreList">
+              <div class="img">{{ item.name }}</div>
               <div class="storeInfo">
                 <p class="store-name pl38 g3 f32">唐城小吃</p>
                 <p class="store-item pl38 f24">美食</p>
